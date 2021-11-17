@@ -1,30 +1,30 @@
 // Theme goes here
 
-import IBMPlexSansMedium from './assets/IBMPlexSans-Medium.ttf';
-import IBMPlexSansRegular from './assets/IBMPlexSans-Regular.ttf';
-import IBMPlexSansSemiBold from './assets/IBMPlexSans-SemiBold.ttf';
-import OpenSansRegular from './assets/OpenSans-Regular.ttf';
+import IBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import IBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+import IBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import OpenSansRegular from '../assets/OpenSans-Regular.ttf';
 
-// declare module '@mui/material/Button' {
-//   interface ButtonPropsVariantOverrides {
-//     cancel: true;
-//     critical: true;
-//   }
-//   interface ButtonPropsColorOverrides {
-//     cancel: true;
-//     critical: true;
-//   }
-// }
-// declare module '@mui/material/styles' {
-//   interface Palette {
-//     cancel: Palette['primary'];
-//     critical: Palette['primary'];
-//   }
-//   interface PaletteOptions {
-//     cancel: PaletteOptions['primary'];
-//     critical: Palette['primary'];
-//   }
-// }
+declare module '@mui/material/Button' {
+  interface ButtonPropsVariantOverrides {
+    cancel: true;
+    critical: true;
+  }
+  interface ButtonPropsColorOverrides {
+    cancel: true;
+    critical: true;
+  }
+}
+declare module '@mui/material/styles' {
+  interface Palette {
+    cancel: Palette['primary'];
+    critical: Palette['primary'];
+  }
+  interface PaletteOptions {
+    cancel: PaletteOptions['primary'];
+    critical: Palette['primary'];
+  }
+}
 
 const otosenseTheme = {
     palette: {

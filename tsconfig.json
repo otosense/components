@@ -16,7 +16,8 @@
         "noUnusedLocals": true,
         "typeRoots" : ["./node_modules/@types", "./typings"]
     },
-    "include": [ "**/*.ts", "**/*.tsx", "**/*.scss" ],
+        "diagnostics": true,
+    "include": [ "**/*.ts", "**/*.tsx", "**/*.scss", "src/types/*" ],
     "exclude": [
         "build",
         "docs",
