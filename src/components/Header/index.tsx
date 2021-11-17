@@ -30,7 +30,7 @@ interface IProps {
     setCurrentTimestamp: () => void;
 }
 
-const Header = (props: IProps) => {
+export default (props: IProps) => {
     const {
         version,
         account,
@@ -165,4 +165,4 @@ const Header = (props: IProps) => {
     );
 };
 
-export default (observer(Header));
+// export default (observer(Header));
