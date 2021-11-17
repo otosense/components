@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
-import ADI_logo from '../../assets/OtoSense_logo.svg';
+import ADI_logo from './OtoSense_logo.svg';
 import { arrowStyle, cloudIconStyle, CloudIconWrapper, HeaderLeft,
     HeaderList, HeaderLogo, HeaderRight, HeaderText, HeaderWrapper,
     iconStyle, logoutMenuStyle } from './styles';
