@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { observer } from 'mobx-react-lite';
+// import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
 import ADI_logo from './OtoSense_logo.svg';
 import { arrowStyle, cloudIconStyle, CloudIconWrapper, HeaderLeft,
@@ -30,7 +30,7 @@ interface IProps {
     setCurrentTimestamp: () => void;
 }
 
-export default (props: IProps) => {
+const Header = (props: IProps) => {
     const {
         version,
         account,
@@ -165,4 +165,4 @@ export default (props: IProps) => {
     );
 };
 
-// export default (observer(Header));
+export default Header;
