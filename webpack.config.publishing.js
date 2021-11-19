@@ -17,7 +17,7 @@ module.exports = {
     target: 'web',
     resolve: {
         modules: [sourcePath, 'node_modules'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg'],
     },
     module: {
         rules: [{
