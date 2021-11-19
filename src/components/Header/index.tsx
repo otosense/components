@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 // import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
-// import ADI_logo from './otoSense_logo.svg';
+import ADI_logo from './otoSense_logo.svg';
 import { arrowStyle, cloudIconStyle, CloudIconWrapper, HeaderLeft,
     HeaderList, HeaderLogo, HeaderRight, HeaderText, HeaderWrapper,
     iconStyle, logoutMenuStyle } from './styles';
@@ -73,7 +73,7 @@ const Header = (props: IProps) => {
     return (
         <HeaderWrapper component="header">
             <HeaderLeft className="oto-header__left" >
-                {/* <HeaderLogo src={ADI_logo} alt="Analog Devices logo" title={version + ''} /> */}
+                <HeaderLogo src={ADI_logo} alt="Analog Devices logo" title={version + ''} />
                 <HeaderText m={'auto'}>{textVersion}: {version}</HeaderText>
             </HeaderLeft>
             <HeaderRight>

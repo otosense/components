@@ -1,6 +1,6 @@
 // Theme goes here
 
-import IBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import IBMPlexSansMedium from './../assets/IBMPlexSans-Medium.ttf';
 import IBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
 import IBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
 import OpenSansRegular from '../assets/OpenSans-Regular.ttf';
