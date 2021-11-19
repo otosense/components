@@ -29,6 +29,7 @@
     "**/*.tsx",
     "**/*.scss",
     "**/*.svg",
+    "**/*.ttf",
     "src/types/*",
     "src/assets/*"
   ],

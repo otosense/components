@@ -17,7 +17,7 @@ module.exports = {
     target: 'web',
     resolve: {
         modules: [sourcePath, 'node_modules'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg', '.ttf'],
     },
     module: {
         rules: [{
@@ -28,6 +28,8 @@ module.exports = {
             test: /\.tsx?$/,
             use: ['ts-loader'],
         }, {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use:'file-loader',
         }],
     },
     plugins: [],

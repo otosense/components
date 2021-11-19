@@ -37,6 +37,7 @@
     "@mui/icons-material": "^5.1.1",
     "@mui/material": "^5.1.1",
     "@types/webpack": "^5.28.0",
+    "file-loader": "^6.2.0",
     "react": "^17.0.2"
   }
 }
