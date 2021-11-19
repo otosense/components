@@ -29,6 +29,11 @@ interface IProps {
     textLogout: string;
     setCurrentTimestamp: () => void;
 }
+export enum LOCALE {
+    ENGLISH = 'english',
+    FRENCH = 'french',
+    HUNGARIAN = 'hungarian',
+}
 
 const Header = (props: IProps) => {
     const {
@@ -52,7 +57,7 @@ const Header = (props: IProps) => {
     const open = Boolean(anchorEl);
     const openAccount = Boolean(anchorAccount);
 
-    const itemClicked = (option: string) => {
+    const itemClicked = (option: LOCALE) => {
         setLocale(option);
         setAnchorEl(null);
     };
