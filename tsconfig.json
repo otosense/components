@@ -1,28 +1,41 @@
 {
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "target": "es5",
-        "lib": ["dom", "es2015", "es6"],
-        "allowJs": true,
-        "declaration": true,
-        "diagnostics": true,
-        "sourceMap": true,
-        "module": "commonjs",
-        "removeComments": true,
-        "jsx": "react",
-        "rootDir": "src",
-        "experimentalDecorators": true,
-        "outDir": "lib",
-        "noUnusedLocals": true,
-        "typeRoots" : ["./node_modules/@types", "./typings"]
-    },
-        "diagnostics": true,
-    "include": [ "**/*.ts", "**/*.tsx", "**/*.scss", "src/types/*" ],
-    "exclude": [
-        "build",
-        "docs",
-        "dist",
-        "node_modules",
-        "lib"
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015",
+      "es6"
+    ],
+    "allowJs": true,
+    "declaration": true,
+    "diagnostics": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "removeComments": true,
+    "jsx": "react",
+    "rootDir": "src",
+    "experimentalDecorators": true,
+    "outDir": "lib",
+    "noUnusedLocals": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
     ]
+  },
+  "diagnostics": true,
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.scss",
+    "src/types/*",
+    "src/assets/*"
+  ],
+  "exclude": [
+    "build",
+    "docs",
+    "dist",
+    "node_modules",
+    "lib"
+  ]
 }
