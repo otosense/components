@@ -20,7 +20,8 @@
     "noUnusedLocals": true,
     "typeRoots": [
       "./node_modules/@types",
-      "./typings"
+      "./typings",
+      "./src/types"
     ]
   },
   "diagnostics": true,
