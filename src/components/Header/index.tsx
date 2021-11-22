@@ -79,10 +79,10 @@ const Header = (props: IProps) => {
 
     return (
         <HeaderWrapper component="header">
-            <HeaderLeft className="oto-header__left" >
-                <HeaderLogo src={logoFile} alt="Analog Devices logo" title={version + ''} />
-                <HeaderText m={'auto'}>{textVersion}: {version}</HeaderText>
-            </HeaderLeft>
+          <HeaderLeft className="oto-header__left" >
+            <HeaderLogo src={logoFile} alt="Analog Devices logo" title={version + ''} />
+            <HeaderText m={'auto'}>{textVersion}: {version}</HeaderText>
+          </HeaderLeft>
             <HeaderRight>
                 <HeaderList
                     aria-label="Language settings"
@@ -135,7 +135,6 @@ const Header = (props: IProps) => {
                 <CloudIconWrapper onClick={setCurrentUserSession}>
                 {isLoginModeOnline ? <CloudDoneIcon sx={cloudIconStyle}/> : <CloudOffIcon sx={cloudIconStyle}/>}
                 </CloudIconWrapper>
-
                 <HeaderText m={'auto'} onClick={() => toggleDateTimeFormat()}>
                     {currentDateTime}
                 </HeaderText>
