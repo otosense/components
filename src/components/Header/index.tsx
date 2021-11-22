@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 // import { observer } from 'mobx-react-lite';
 import React, { useEffect, useState } from 'react';
-import ADI_logo from './otoSense_logo.svg';
+// import ADI_logo from '../../assets/otoSense_logo.svg';
 import { arrowStyle, cloudIconStyle, CloudIconWrapper, HeaderLeft,
     HeaderList, HeaderLogo, HeaderRight, HeaderText, HeaderWrapper,
     iconStyle, logoutMenuStyle } from './styles';
@@ -23,16 +23,22 @@ interface IProps {
     setCurrentUserSession: VoidFunction;
     toggleDateTimeFormat: VoidFunction;
     languageOptions: string[];
-    setLocale: (option: LOCALE) => void;
+    setLocale: (option: LOCALES) => void;
     textVersion: string;
     locale: string;
     textLogout: string;
     setCurrentTimestamp: () => void;
+    logoFile: string;
 }
-export enum LOCALE {
-    ENGLISH = 'english',
-    FRENCH = 'french',
-    HUNGARIAN = 'hungarian',
+
+export enum LOCALES {
+    DANISH = 'da',
+    ENGLISH = 'en',
+    FRENCH = 'fr',
+    JAPANESE = 'jp',
+    KOREAN = 'ko',
+    SPANISH = 'es',
+    HUNGARIAN = 'hu'
 }
 
 const Header = (props: IProps) => {
@@ -50,6 +56,7 @@ const Header = (props: IProps) => {
         locale,
         textLogout,
         setCurrentTimestamp,
+        logoFile,
     } = props;
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -73,7 +80,7 @@ const Header = (props: IProps) => {
     return (
         <HeaderWrapper component="header">
             <HeaderLeft className="oto-header__left" >
-                <HeaderLogo src={ADI_logo} alt="Analog Devices logo" title={version + ''} />
+                <HeaderLogo src={logoFile} alt="Analog Devices logo" title={version + ''} />
                 <HeaderText m={'auto'}>{textVersion}: {version}</HeaderText>
             </HeaderLeft>
             <HeaderRight>

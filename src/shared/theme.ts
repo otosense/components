@@ -1,9 +1,9 @@
 // Theme goes here
 
-import iBMPlexSansMedium from './IBMPlexSans-Medium.ttf';
-import iBMPlexSansRegular from './IBMPlexSans-Regular.ttf';
-import iBMPlexSansSemiBold from './IBMPlexSans-SemiBold.ttf';
-import openSansRegular from './OpenSans-Regular.ttf';
+import iBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import iBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+import iBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import openSansRegular from '../assets/OpenSans-Regular.ttf';
 
 declare module '@mui/material/Button' {
   // interface ButtonPropsVariantOverrides {
