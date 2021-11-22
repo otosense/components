@@ -83,28 +83,28 @@ const Header = (props: IProps) => {
             <HeaderLogo src={logoFile} alt="Analog Devices logo" title={version + ''} />
             <HeaderText m={'auto'}>{textVersion}: {version}</HeaderText>
           </HeaderLeft>
-            <HeaderRight>
-                <HeaderList
-                    aria-label="Language settings"
-                    sx={{ textTransform: 'uppercase' }}
-                >
-                    <ListItem
-                        button
-                        id="lock-button"
-                        aria-haspopup="listbox"
-                        aria-controls="lock-menu"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={(e) => setAnchorEl(e.currentTarget)}
-                        sx={{height: '100%'}}
-                    >
-                        <LanguageIcon sx={iconStyle} />
-                    <ListItemText
-                        primary={locale}
-                        // secondary={<AccessAlarmIcon color="primary" />}
-                    />
-                        <ArrowDropDownIcon sx={arrowStyle}/>
-                    </ListItem>
-                </HeaderList>
+          <HeaderRight>
+            <HeaderList
+              aria-label="Language settings"
+              sx={{ textTransform: 'uppercase' }}
+            >
+              <ListItem
+                  button
+                  id="lock-button"
+                  aria-haspopup="listbox"
+                  aria-controls="lock-menu"
+                  aria-expanded={open ? 'true' : undefined}
+                  onClick={(e) => setAnchorEl(e.currentTarget)}
+                  sx={{height: '100%'}}
+              >
+                <LanguageIcon sx={iconStyle} />
+              <ListItemText
+                  primary={locale}
+                  // secondary={<AccessAlarmIcon color="primary" />}
+              />
+                  <ArrowDropDownIcon sx={arrowStyle}/>
+              </ListItem>
+            </HeaderList>
                 <Menu
                     id="lock-menu"
                     anchorEl={anchorEl}
@@ -125,7 +125,7 @@ const Header = (props: IProps) => {
                                     sx={{justifyContent: 'center', width: '100px', pt: 0.5, pb: 0.5}}
                                     onClick={() => itemClicked(option)}
                                 >
-                                    {option}
+                                  {option}
                                 </MenuItem>
                             </>
 
