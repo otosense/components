@@ -10,6 +10,7 @@
       "avoid-escape",
       "jsx-double"
     ],
+    "indent": [true, "spaces", 4],
     "interface-name": false,
     "no-submodule-imports": false,
     "no-var-requires": false,
