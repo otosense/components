@@ -1,8 +1,9 @@
 // Theme goes here
 import { ThemeOptions } from '@mui/material';
-import iBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
-import iBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
-import iBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
 import openSansRegular from '../assets/OpenSans-Regular.ttf';
 import { createTheme } from '@mui/material/styles';
 declare module '@mui/material/Button' {
@@ -21,13 +22,13 @@ declare module '@mui/material/styles' {
   interface Palette {
     cancel: Palette['primary'];
     critical: Palette['primary'];
-    // header: Palette['primary'];
+    gray: Palette['primary'];
   }
 
   interface PaletteOptions {
     cancel: PaletteOptions['primary'];
     critical: PaletteOptions['primary'];
-    // header: PaletteOptions['primary'];
+    gray: PaletteOptions['primary'];
   }
 }
 
@@ -56,8 +57,16 @@ const otosenseTheme: ThemeOptions = createTheme({
       light: '#E9D0D9',
       dark: '#8C2026',
     },
+    gray: {
+      main: '#767989',
+      contrastText: '#fff',
+      light: '#E0E1E7',
+      dark: '#000',
+    },
     error: {
-      main: '#f56d4d',
+      main: '#CC4734',
+      contrastText: '#fff',
+      dark: '#CC4734',
     },
     warning: {
       main: '#fff847',
@@ -74,27 +83,27 @@ const otosenseTheme: ThemeOptions = createTheme({
     },
     text: {
       primary: '#101820',
-      secondary: '#146474',
+      secondary: '#767989',
       disabled: '#BDBFCA',
     },
   },
   typography: {
     htmlFontSize: 16,
     h1: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
       lineHeight: '40px',
       // letterSpacing: '',
     },
     h2: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 24,
       lineHeight: '32px',
       textTransform: 'capitalize',
       // letterSpacing: '',
     },
     h3: {
-      'fontFamily': '',
+      'fontFamily': '"IBMPlexSans-Regular", sans-serif',
       'fontSize': 20,
       'lineHeight': '24px',
       '@media (min-width:600px)': {
@@ -103,12 +112,12 @@ const otosenseTheme: ThemeOptions = createTheme({
       // letterSpacing: '',
     },
     h4: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
       lineHeight: '24px',
     },
     body1: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 16,
       lineHeight: '',
       letterSpacing: '',
@@ -132,7 +141,7 @@ const otosenseTheme: ThemeOptions = createTheme({
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${iBMPlexSansRegular}) format('truetype');
+              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -140,7 +149,7 @@ const otosenseTheme: ThemeOptions = createTheme({
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${iBMPlexSansMedium}) format('truetype');
+              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -148,7 +157,15 @@ const otosenseTheme: ThemeOptions = createTheme({
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${iBMPlexSansSemiBold}) format('truetype');
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'IBMPlexSans-Bold';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -188,6 +205,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           style: {
             fontSize: 14,
             minHeight: 40,
+            minWidth: 100,
           },
         },
       ],
@@ -273,22 +291,20 @@ const otosenseTheme: ThemeOptions = createTheme({
         },
       },
     },
-    // MuiModal: {
-    //   styleOverrides: {
-    //     root: {
-    //       border: 0,
-    //       position: 'absolute',
-    //       top: '50%',
-    //       left: '50%',
-    //       transform: 'translate(-50%, -50%)',
-    //       width: 'auto',
-    //       backgroundColor: '#fefefe',
-    //       padding: 24,
-    //       boxShadow: '0 0 10px #555',
-    //       height: 'max-content'
-    //     }
-    //   }
-    // },
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          fontFamily: '"IBMPlexSans-Regular", sans-serif'
+        },
+      }
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          color: '#767989'
+        }
+      }
+    }
   },
 });
 export default otosenseTheme;

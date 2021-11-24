@@ -18,7 +18,7 @@ const OtoModal = (props: IProps) => {
     width: 'auto',
     bgcolor: 'background.paper',
     boxShadow: 24,
-    p: 2,
+    p: 4,
   };
   return(
     <Modal open={true} onClose={onClose} aria-labelledby={label} id={id}>
