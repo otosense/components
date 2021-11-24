@@ -1,10 +1,10 @@
 // Theme goes here
-
+import { ThemeOptions } from '@mui/material';
 import iBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
 import iBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
 import iBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
 import openSansRegular from '../assets/OpenSans-Regular.ttf';
-
+import { createTheme } from '@mui/material/styles';
 declare module '@mui/material/Button' {
   // interface ButtonPropsVariantOverrides {
   //   cancel: true;
@@ -14,23 +14,24 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     cancel: true;
     critical: true;
+    // header: true;
   }
 }
 declare module '@mui/material/styles' {
   interface Palette {
     cancel: Palette['primary'];
     critical: Palette['primary'];
-    header: Palette['primary'];
+    // header: Palette['primary'];
   }
 
   interface PaletteOptions {
     cancel: PaletteOptions['primary'];
     critical: PaletteOptions['primary'];
-    header: PaletteOptions['primary'];
+    // header: PaletteOptions['primary'];
   }
 }
 
-const otosenseTheme = {
+const otosenseTheme: ThemeOptions = createTheme({
   palette: {
     primary: {
       main: '#009fbd',
@@ -40,6 +41,8 @@ const otosenseTheme = {
     secondary: {
       main: '#CBD4EB',
       contrastText: '#003965',
+      dark: '#A1B4DC',
+      light: '#fff',
     },
     cancel: {
       main: '#C6D6DA',
@@ -246,11 +249,47 @@ const otosenseTheme = {
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          minWidth: 424,
+          width: 424,
         },
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          'paddingLeft': '1rem',
+          'paddingRight': '1rem',
+          'textTransform': 'capitalize',
+          'backgroundColor': '#f3f3f3',
+          '&:hover': {
+            backgroundColor: '#fff',
+          },
+        },
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          padding: '1rem',
+        },
+      },
+    },
+    // MuiModal: {
+    //   styleOverrides: {
+    //     root: {
+    //       border: 0,
+    //       position: 'absolute',
+    //       top: '50%',
+    //       left: '50%',
+    //       transform: 'translate(-50%, -50%)',
+    //       width: 'auto',
+    //       backgroundColor: '#fefefe',
+    //       padding: 24,
+    //       boxShadow: '0 0 10px #555',
+    //       height: 'max-content'
+    //     }
+    //   }
+    // },
   },
-};
+});
 export default otosenseTheme;
 
