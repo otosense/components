@@ -38,6 +38,7 @@
     "lib/**"
   ],
   "dependencies": {
+    "@mui/x-data-grid": "^5.0.1",
     "@types/webpack": "^5.28.0",
     "file-loader": "^6.2.0"
   }
