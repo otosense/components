@@ -16,7 +16,17 @@ if tsc runs correctly:
 
 ### Usage
 
-Header component takes props below:
+#### Buttons
+
+We use:
+variants: 'contained' (default),  'outlined', 'text'
+color: 'primary', 'secondary', 'error', 'success', 'info', 'warning', 'cancel', 'critical', 'gray'
+size: 'small', 'medium', 'large'
+
+- Please see Figma file to refer all the variants and color options
+
+
+#### Header component takes props below:
 
 <Header
   version={version}
@@ -52,7 +62,7 @@ logoFile: string;
 
 ----
 
-OtoModal component takes props below *children is passed automatically
+#### OtoModal component takes props below *children is passed automatically
 
   onClose: VoidFunction;
   label?: string;

@@ -207,6 +207,14 @@ const otosenseTheme: ThemeOptions = createTheme({
             minHeight: 40,
             minWidth: 100,
           },
+        }, {
+          props: {variant: 'outlined', size: 'medium', color: 'primary'},
+          style: {
+            border: '2px solid #009fbd',
+            fontSize: 14,
+            minHeight: 40,
+            minWidth: 100,
+          },
         },
       ],
     },
