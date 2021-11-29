@@ -9,7 +9,6 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { ThemeProvider } from '@mui/material/styles';
 import otosenseTheme from '../../shared/theme';
-// import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 // import ADI_logo from '../../assets/otoSense_logo.svg';
 import {
