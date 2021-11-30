@@ -18,13 +18,20 @@ if tsc runs correctly:
 
 #### Buttons
 
-We use:
 variants: 'contained' (default),  'outlined', 'text'
 color: 'primary', 'secondary', 'error', 'success', 'info', 'warning', 'cancel', 'critical', 'gray'
 size: 'small', 'medium', 'large'
 
 - Please see Figma file to refer all the variants and color options
 
+#### Dialog
+- use with DialogTitle, DialogContent, and DialogActions to have right spacings.
+
+<Dialog>
+  <DialogTitle>title/header here</DialogTitle>
+  <DialogContent>contents here</DialogContent>
+  <DialogActions>Close/save button here</DialogActions>
+</Dialog>
 
 #### Header component takes props below:
 
@@ -64,11 +71,13 @@ logoFile: string;
 
 #### OtoModal component takes props below *children is passed automatically
 
+- please use Dialog for general use. This may be deleted.
+
   onClose: VoidFunction;
   label?: string;
   id?: string;
   children: JSX.Element;
 
-<OtoModal onClose={backToTable} id="id of model" label="my label">
+<OtoModal onClose={closeFunction} id="id of model" label="my label">
   // all children go here
 </OtoModal>

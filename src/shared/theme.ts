@@ -188,7 +188,6 @@ const otosenseTheme: ThemeOptions = createTheme({
       defaultProps: {
         variant: 'contained',
         disableElevation: true,
-        // disableRipple: true,
       },
       variants: [
         {
@@ -310,6 +309,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       styleOverrides: {
         head: {
           color: '#767989'
+        }
+      }
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: 24,
         }
       }
     }
