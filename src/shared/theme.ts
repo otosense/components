@@ -15,7 +15,7 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     cancel: true;
     critical: true;
-    // header: true;
+    gray: true;
   }
 }
 declare module '@mui/material/styles' {
@@ -221,8 +221,12 @@ const otosenseTheme: ThemeOptions = createTheme({
       variants: [
         {
           props: {variant: 'filled', size: 'medium'},
-          style: {marginRight: 22, marginBottom: 25, width: 315},
+          style: {marginRight: 22, marginBottom: 25, minWidth: 315},
         },
+        {
+          props: {size: 'small'},
+          style: {minWidth: '170px'}
+        }
       ],
     },
     MuiTextField: {
@@ -313,6 +317,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       }
     },
     MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: 24,
+        }
+      }
+    },
+    MuiDialogTitle: {
       styleOverrides: {
         root: {
           padding: 24,
