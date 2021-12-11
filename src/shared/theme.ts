@@ -1,10 +1,11 @@
 // Theme goes here
-
-import iBMPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
-import iBMPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
-import iBMPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import { ThemeOptions } from '@mui/material';
+import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
 import openSansRegular from '../assets/OpenSans-Regular.ttf';
-
+import { createTheme } from '@mui/material/styles';
 declare module '@mui/material/Button' {
   // interface ButtonPropsVariantOverrides {
   //   cancel: true;
@@ -14,23 +15,24 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     cancel: true;
     critical: true;
+    gray: true;
   }
 }
 declare module '@mui/material/styles' {
   interface Palette {
     cancel: Palette['primary'];
     critical: Palette['primary'];
-    header: Palette['primary'];
+    gray: Palette['primary'];
   }
 
   interface PaletteOptions {
     cancel: PaletteOptions['primary'];
     critical: PaletteOptions['primary'];
-    header: PaletteOptions['primary'];
+    gray: PaletteOptions['primary'];
   }
 }
 
-const otosenseTheme = {
+const otosenseTheme: ThemeOptions = createTheme({
   palette: {
     primary: {
       main: '#009fbd',
@@ -40,6 +42,8 @@ const otosenseTheme = {
     secondary: {
       main: '#CBD4EB',
       contrastText: '#003965',
+      dark: '#A1B4DC',
+      light: '#fff',
     },
     cancel: {
       main: '#C6D6DA',
@@ -53,8 +57,16 @@ const otosenseTheme = {
       light: '#E9D0D9',
       dark: '#8C2026',
     },
+    gray: {
+      main: '#767989',
+      contrastText: '#fff',
+      light: '#E0E1E7',
+      dark: '#000',
+    },
     error: {
-      main: '#f56d4d',
+      main: '#CC4734',
+      contrastText: '#fff',
+      dark: '#CC4734',
     },
     warning: {
       main: '#fff847',
@@ -71,27 +83,27 @@ const otosenseTheme = {
     },
     text: {
       primary: '#101820',
-      secondary: '#146474',
+      secondary: '#767989',
       disabled: '#BDBFCA',
     },
   },
   typography: {
     htmlFontSize: 16,
     h1: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
       lineHeight: '40px',
       // letterSpacing: '',
     },
     h2: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 24,
       lineHeight: '32px',
       textTransform: 'capitalize',
       // letterSpacing: '',
     },
     h3: {
-      'fontFamily': '',
+      'fontFamily': '"IBMPlexSans-Regular", sans-serif',
       'fontSize': 20,
       'lineHeight': '24px',
       '@media (min-width:600px)': {
@@ -100,12 +112,12 @@ const otosenseTheme = {
       // letterSpacing: '',
     },
     h4: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
       lineHeight: '24px',
     },
     body1: {
-      fontFamily: '',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 16,
       lineHeight: '',
       letterSpacing: '',
@@ -129,7 +141,7 @@ const otosenseTheme = {
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${iBMPlexSansRegular}) format('truetype');
+              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -137,7 +149,7 @@ const otosenseTheme = {
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${iBMPlexSansMedium}) format('truetype');
+              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -145,7 +157,15 @@ const otosenseTheme = {
               font-style: normal;
               font-display: swap;
               font-weight: 400;
-              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${iBMPlexSansSemiBold}) format('truetype');
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'IBMPlexSans-Bold';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
               unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
             },
             @font-face {
@@ -168,7 +188,6 @@ const otosenseTheme = {
       defaultProps: {
         variant: 'contained',
         disableElevation: true,
-        // disableRipple: true,
       },
       variants: [
         {
@@ -185,6 +204,15 @@ const otosenseTheme = {
           style: {
             fontSize: 14,
             minHeight: 40,
+            minWidth: 100,
+          },
+        }, {
+          props: {variant: 'outlined', size: 'medium', color: 'primary'},
+          style: {
+            border: '2px solid #009fbd',
+            fontSize: 14,
+            minHeight: 40,
+            minWidth: 100,
           },
         },
       ],
@@ -193,8 +221,12 @@ const otosenseTheme = {
       variants: [
         {
           props: {variant: 'filled', size: 'medium'},
-          style: {marginRight: 22, marginBottom: 25, width: 315},
+          style: {marginRight: 22, marginBottom: 25, minWidth: 315},
         },
+        {
+          props: {size: 'small'},
+          style: {minWidth: '170px'}
+        }
       ],
     },
     MuiTextField: {
@@ -246,11 +278,59 @@ const otosenseTheme = {
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          minWidth: 424,
+          width: 424,
         },
       },
     },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          'paddingLeft': '1rem',
+          'paddingRight': '1rem',
+          'textTransform': 'capitalize',
+          'backgroundColor': '#f3f3f3',
+          '&:hover': {
+            backgroundColor: '#fff',
+          },
+        },
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          padding: '1rem',
+        },
+      },
+    },
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          fontFamily: '"IBMPlexSans-Regular", sans-serif'
+        },
+      }
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          color: '#767989'
+        }
+      }
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: 24,
+        }
+      }
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          padding: 24,
+        }
+      }
+    }
   },
-};
+});
 export default otosenseTheme;
 

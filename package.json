@@ -22,8 +22,8 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11",
     "html-webpack-plugin": "^4.5.0",
-    "react": "^17.0.2",
     "ts-loader": "^9.2.3",
     "tslint": "^6.1.3",
     "tslint-loader": "^3.5.4",
@@ -33,13 +33,17 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.0"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "files": [
     "lib/**"
   ],
   "dependencies": {
     "@mui/x-data-grid": "^5.0.1",
     "@types/webpack": "^5.28.0",
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "mobx": "^6.3.8"
   }
 }

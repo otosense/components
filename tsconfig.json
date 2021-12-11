@@ -18,6 +18,7 @@
     "experimentalDecorators": true,
     "outDir": "lib",
     "noUnusedLocals": true,
+    "esModuleInterop": true,
     "typeRoots": [
       "./node_modules/@types",
       "./typings",
