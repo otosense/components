@@ -6,7 +6,7 @@ import * as React from 'react';
 import { HeaderWrapper } from './styles';
 
 interface IProps {
-  children?: React.ReactNode;
+  children?: JSX.Element;
 }
 
 const Header = (props: IProps) => {

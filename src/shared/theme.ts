@@ -6,6 +6,26 @@ import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
 import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
 import openSansRegular from '../assets/OpenSans-Regular.ttf';
 import { createTheme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true;
+    sm: false;
+    md: false;
+    lg: true;
+    xl: false;
+  }
+}
+declare module '@mui/material/Icon'  {
+  interface IconPropsColorOverrides {
+    gray: true;
+  }
+}
+declare module '@mui/material/FormControl'{
+  interface FormControlPropsSizeOverrides {
+    xsmall: true;
+  }
+}
 declare module '@mui/material/Button' {
   // interface ButtonPropsVariantOverrides {
   //   cancel: true;
@@ -69,13 +89,16 @@ const otosenseTheme: ThemeOptions = createTheme({
       dark: '#CC4734',
     },
     warning: {
-      main: '#fff847',
+      main: '#FED141',
+      contrastText: '#101820'
     },
     info: {
       main: '#47afff',
+      contrastText: '#101820',
     },
     success: {
       main: '#1db381',
+      contrastText: '#101820'
     },
     background: {
       paper: '#fff',
@@ -86,6 +109,12 @@ const otosenseTheme: ThemeOptions = createTheme({
       secondary: '#767989',
       disabled: '#BDBFCA',
     },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      lg: 1280,
+    }
   },
   typography: {
     htmlFontSize: 16,
@@ -112,9 +141,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       // letterSpacing: '',
     },
     h4: {
-      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 18,
       lineHeight: '24px',
+    },
+    h5: {
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
+      fontSize: 16,
     },
     body1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
@@ -203,7 +236,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           props: {variant: 'contained', size: 'medium'},
           style: {
             fontSize: 14,
-            minHeight: 40,
+            minHeight: 45,
             minWidth: 100,
           },
         }, {
@@ -218,21 +251,36 @@ const otosenseTheme: ThemeOptions = createTheme({
       ],
     },
     MuiFormControl: {
+      defaultProps: {
+        variant: 'filled',
+        size: 'medium'
+      },
       variants: [
         {
           props: {variant: 'filled', size: 'medium'},
-          style: {marginRight: 22, marginBottom: 25, minWidth: 315},
+          style: {marginRight: 22, marginBottom: 25, minWidth: 315, height: 45},
         },
         {
           props: {size: 'small'},
-          style: {minWidth: '170px'}
+          style: {minWidth: 170, height: 45}
+        },
+        {
+          props: {variant: 'filled', size: 'xsmall'},
+          style: {minWidth: 100, height: 45}
         }
       ],
     },
     MuiTextField: {
       defaultProps: {
-        variant: 'standard',
+        variant: 'filled',
+        size: 'medium',
       },
+      variants: [
+        {
+          props: {variant: 'filled', size: 'medium'},
+          style: {height: 45, minWidth: 315}
+        }
+      ],
     },
     MuiTypography: {
       variants: [
@@ -329,6 +377,80 @@ const otosenseTheme: ThemeOptions = createTheme({
           padding: 24,
         }
       }
+    },
+    MuiSelect: {
+      styleOverrides: {
+        filled: {
+          padding: 0, margin: 'auto'
+        }
+      }
+    },
+    MuiInput: {
+      variants: [
+        {
+          props: {size: 'medium'},
+          style: {minHeight: 45}
+        }
+      ]
+    },
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          height: '100%', paddingLeft: 8
+        }
+      },
+      variants: [
+        {
+          props: {size: 'medium'},
+          style: {minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%'}
+        }
+      ]
+    },
+    MuiSnackbar: {
+      defaultProps: {
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'center',
+        }
+      }
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          borderRadius: 4,
+          fontSize: 16,
+          padding: '16px 24px',
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
+        },
+        filled: {
+          display: 'flex',
+          alignItems: 'center',
+        },
+        message: {
+          padding: 0,
+        },
+        action: {
+          padding: 0,
+        },
+        // filledError: {
+        //   color: '#111'
+        // },
+        // filledInfo: {
+        //   color: '#111'
+        // },
+        // icon: {
+        //   color: '#111'
+        // },
+        // filledSuccess: {
+
+        // },
+      },
+      // variants: [
+      //   {
+      //     props: { severity: 'error'},
+      //     style: {}
+      //   }
+      // ]
     }
   },
 });
