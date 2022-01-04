@@ -44,6 +44,8 @@
     "@mui/x-data-grid": "^5.0.1",
     "@types/webpack": "^5.28.0",
     "file-loader": "^6.2.0",
-    "mobx": "^6.3.8"
+    "mobx": "^6.3.8",
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.30"
   }
 }

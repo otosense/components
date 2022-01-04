@@ -6,13 +6,19 @@ import otosenseTheme from './shared/theme';
 import OtoModal from './components/OtoModal';
 import ScrollToTopBtn from './components/ScrollToTop'
 import { DataGridTools } from './components/DataGrid/DataGridHeader/DataGridToolbar';
+import moment from 'moment';
+import { DataGridRowActions } from './components/DataGrid/DataGridActionCell';
 
 export {
   // StyledSelectField,
   // StyledTextField,
   Header,
-  DataGrid, DataGridColumns, DataGridTools, LazyDataSource,
+  DataGrid, DataGridColumns, DataGridRowActions, DataGridTools, LazyDataSource,
   OtoModal,
   ScrollToTopBtn,
   otosenseTheme,
 };
+
+export function setLocale(localeKey) {
+    moment.locale(localeKey)
+}

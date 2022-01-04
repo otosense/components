@@ -15,3 +15,11 @@ export const headerContainerStyle = {
 export const toolStyle = {
     marginLeft: '5px',
 };
+
+export const renderCellStyle = {
+    display: 'flex',
+}
+
+export const actionStyle = {
+    margin: '0px 2px',
+};
