@@ -28,6 +28,29 @@ size: 'small', 'medium', 'large'
 
 - Please see Figma file to refer all the variants and color options
 
+#### Select
+Select field is styled in Form Control. 
+Use default and apply size props in the Form Control (not Select) component. 
+Most of the time, we need Typography component with variant overline which is styled for this.
+
+Example:
+<FormControl size="medium">
+  <Typography variant="overline">
+    {header}
+  </Typography>
+  <Select
+    value={value}
+    onChange={handleChange}
+  >
+    {options.map((name, j) => {
+      return (
+        <MenuItem key={`assettype-option-${name}-${j}`} value={name}>
+          {name}
+        </MenuItem>);
+    })}
+  </Select>
+</FormControl>
+
 #### Dialog
 - use with DialogTitle, DialogContent, and DialogActions to have right spacings.
 

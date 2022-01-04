@@ -6,6 +6,46 @@ import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
 import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
 import openSansRegular from '../assets/OpenSans-Regular.ttf';
 import { createTheme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true;
+    sm: false;
+    md: true;
+    lg: true;
+    xl: false;
+  }
+}
+declare module '@mui/material/Icon'  {
+  interface IconPropsColorOverrides {
+    gray: true;
+  }
+}
+declare module '@mui/material/Box'  {
+  interface BoxPropsColorOverrides {
+    gray: true;
+  }
+}
+// declare module '@mui/material/TextField'  {
+//   interface TextFieldPropsColorOverrides {
+//     whiteBg: true;
+//   }
+// }
+declare module '@mui/material/InputBase' {
+  interface InputBasePropsColorOverrides {
+    whiteBg: true;
+  }
+}
+// declare module '@mui/material/FilledInput' {
+//   interface FilledInputPropsColorOverrides {
+//     whiteBg: true;
+//   }
+// }
+declare module '@mui/material/FormControl'{
+  interface FormControlPropsSizeOverrides {
+    xsmall: true;
+  }
+}
 declare module '@mui/material/Button' {
   // interface ButtonPropsVariantOverrides {
   //   cancel: true;
@@ -23,12 +63,14 @@ declare module '@mui/material/styles' {
     cancel: Palette['primary'];
     critical: Palette['primary'];
     gray: Palette['primary'];
+    whiteBg: Palette['primary'];
   }
 
   interface PaletteOptions {
     cancel: PaletteOptions['primary'];
     critical: PaletteOptions['primary'];
     gray: PaletteOptions['primary'];
+    whiteBg: PaletteOptions['primary'];
   }
 }
 
@@ -60,7 +102,7 @@ const otosenseTheme: ThemeOptions = createTheme({
     gray: {
       main: '#767989',
       contrastText: '#fff',
-      light: '#E0E1E7',
+      light: '#dfe1e8',
       dark: '#000',
     },
     error: {
@@ -69,17 +111,24 @@ const otosenseTheme: ThemeOptions = createTheme({
       dark: '#CC4734',
     },
     warning: {
-      main: '#fff847',
+      main: '#FED141',
+      contrastText: '#101820'
     },
     info: {
       main: '#47afff',
+      contrastText: '#101820',
     },
     success: {
       main: '#1db381',
+      contrastText: '#101820'
+    },
+    whiteBg: {
+      main: '#009fbd',
+      contrastText: '#fff',
     },
     background: {
       paper: '#fff',
-      default: '',
+      default: '#F3F3F3',
     },
     text: {
       primary: '#101820',
@@ -87,8 +136,16 @@ const otosenseTheme: ThemeOptions = createTheme({
       disabled: '#BDBFCA',
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      md: 768,
+      lg: 1280,
+    }
+  },
   typography: {
     htmlFontSize: 16,
+    fontFamily: '"IBMPlexSans-Regular", sans-serif',
     h1: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
@@ -96,7 +153,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       // letterSpacing: '',
     },
     h2: {
-      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 24,
       lineHeight: '32px',
       textTransform: 'capitalize',
@@ -112,9 +169,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       // letterSpacing: '',
     },
     h4: {
-      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 18,
       lineHeight: '24px',
+    },
+    h5: {
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
+      fontSize: 16,
     },
     body1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
@@ -122,11 +183,19 @@ const otosenseTheme: ThemeOptions = createTheme({
       lineHeight: '',
       letterSpacing: '',
     },
+    subtitle1: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 18,
+    },
+    caption: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 14,
+    },
     button: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 14,
       // lineHeight: '',
-      // letterSpacing: '',
+      letterSpacing: 1,
     },
   },
   shape: {
@@ -134,6 +203,16 @@ const otosenseTheme: ThemeOptions = createTheme({
   },
   spacing: 24,
   components: {
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: {
+          marginTop: 0,
+        },
+        positionStart: {
+          marginTop: 0,
+        }
+      }
+    },
     MuiCssBaseline: {
       styleOverrides: `
             @font-face {
@@ -203,7 +282,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           props: {variant: 'contained', size: 'medium'},
           style: {
             fontSize: 14,
-            minHeight: 40,
+            minHeight: 45,
             minWidth: 100,
           },
         }, {
@@ -214,31 +293,68 @@ const otosenseTheme: ThemeOptions = createTheme({
             minHeight: 40,
             minWidth: 100,
           },
-        },
+        }, {
+          props: {variant: 'text', color: 'secondary'},
+          style: {
+            ':hover': {
+              backgroundColor: '#CBD4EB'
+            }
+          }
+        }, {
+          props: {size: 'medium'},
+          style: {height: 45}
+        }
       ],
     },
     MuiFormControl: {
+      defaultProps: {
+        variant: 'filled',
+        size: 'medium'
+      },
       variants: [
         {
           props: {variant: 'filled', size: 'medium'},
-          style: {marginRight: 22, marginBottom: 25, minWidth: 315},
+          style: { minWidth: 315, height: 45},
         },
         {
           props: {size: 'small'},
-          style: {minWidth: '170px'}
+          style: {minWidth: 170, minHeight: 45, width: 170}
+        },
+        {
+          props: {variant: 'filled', size: 'xsmall'},
+          style: {minWidth: 100, height: 45}
         }
       ],
     },
     MuiTextField: {
       defaultProps: {
-        variant: 'standard',
+        variant: 'filled',
+        size: 'medium',
       },
+      variants: [
+        {
+          props: {variant: 'filled', size: 'medium'},
+          style: {height: 45, minWidth: 315}
+        },
+        {
+          props: {size: 'small'},
+          style: {maxWidth: 170}
+        },
+        {
+          props: {variant: 'outlined'},
+          style: {height: 45}
+        }
+      ],
     },
     MuiTypography: {
       variants: [
         {
           props: {variant: 'overline'},
-          style: {textTransform: 'capitalize', marginBottom: '7px', lineHeight: 'initial', fontSize: '14px'},
+          style: {textTransform: 'capitalize', marginBottom: 7, lineHeight: 'initial', fontSize: 14},
+        },
+        {
+          props: {variant: 'caption'},
+          style: {fontSize: 14},
         },
       ],
       defaultProps: {
@@ -249,7 +365,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           h4: 'h4',
           h5: 'h5',
           h6: 'h6',
-          subtitle1: 'h2',
+          subtitle1: 'header',
           subtitle2: 'span',
           body1: 'span',
           body2: 'p',
@@ -299,6 +415,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       styleOverrides: {
         root: {
           padding: '1rem',
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
         },
       },
     },
@@ -327,6 +444,99 @@ const otosenseTheme: ThemeOptions = createTheme({
       styleOverrides: {
         root: {
           padding: 24,
+        }
+      }
+    },
+    MuiSelect: {
+      styleOverrides: {
+        filled: {
+          padding: 0, margin: 'auto'
+        }
+      }
+    },
+    MuiInput: {
+      variants: [
+        {
+          props: {size: 'medium'},
+          style: {minHeight: 45}
+        }
+      ]
+    },
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          height: '100%', paddingLeft: 8, paddingTop: 0, paddingBottom: 0
+        },
+        input: {
+          padding: 0, margin: 'auto',
+        },
+        underline: {
+          paddingTop: 0,
+        }
+      },
+      variants: [
+        {
+          props: {size: 'medium'},
+          style: {minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%'}
+        },
+        {
+          props: {size: 'small'},
+          style: {minHeight: 45}
+        },
+      ]
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          height: '100%',
+        }
+      },
+      variants: [
+        {
+          props: {size: 'medium'},
+          style: {height: 45}
+        },
+      ]
+    },
+    MuiSnackbar: {
+      defaultProps: {
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'center',
+        }
+      }
+    },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          borderRadius: 4,
+          fontSize: 16,
+          padding: '16px 24px',
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
+        },
+        filled: {
+          display: 'flex',
+          alignItems: 'center',
+        },
+        message: {
+          padding: 0,
+        },
+        action: {
+          padding: 0,
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        inputRoot: {
+          paddingTop: 0,
+        }
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          paddingTop: 0,
         }
       }
     }
