@@ -19,6 +19,7 @@
     "outDir": "lib",
     "noUnusedLocals": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types",
       "./typings",

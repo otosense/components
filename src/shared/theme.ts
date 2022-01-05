@@ -1,16 +1,15 @@
-// Theme goes here
 import { ThemeOptions } from '@mui/material';
-import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
-import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
-import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
-import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
-import openSansRegular from '../assets/OpenSans-Regular.ttf';
+// import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+// import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+// import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+// import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
+// import openSansRegular from '../assets/OpenSans-Regular.ttf';
 import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
     xs: true;
-    sm: false;
+    sm: true;
     md: true;
     lg: true;
     xl: false;
@@ -139,6 +138,7 @@ const otosenseTheme: ThemeOptions = createTheme({
   breakpoints: {
     values: {
       xs: 0,
+      sm: 480,
       md: 768,
       lg: 1280,
     }
@@ -150,6 +150,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
       lineHeight: '40px',
+      color: '#101820',
       // letterSpacing: '',
     },
     h2: {
@@ -157,12 +158,14 @@ const otosenseTheme: ThemeOptions = createTheme({
       fontSize: 24,
       lineHeight: '32px',
       textTransform: 'capitalize',
+      color: '#101820',
       // letterSpacing: '',
     },
     h3: {
       'fontFamily': '"IBMPlexSans-Regular", sans-serif',
       'fontSize': 20,
       'lineHeight': '24px',
+      color: '#101820',
       '@media (min-width:600px)': {
         fontSize: '1.5rem',
       },
@@ -171,25 +174,42 @@ const otosenseTheme: ThemeOptions = createTheme({
     h4: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 18,
+      color: '#101820',
       lineHeight: '24px',
     },
     h5: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 16,
+      color: '#101820',
     },
     body1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 16,
       lineHeight: '',
       letterSpacing: '',
+      color: '#101820',
     },
     subtitle1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
+      textTransform: 'capitalize',
+      color: '#101820',
+    },
+    subtitle2: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 24,
+      textTransform: 'capitalize',
+      color: '#101820',
     },
     caption: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 14,
+      color: '#101820',
+    },
+    overline: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 14,
+      color: '#101820',
     },
     button: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
@@ -213,50 +233,50 @@ const otosenseTheme: ThemeOptions = createTheme({
         }
       }
     },
-    MuiCssBaseline: {
-      styleOverrides: `
-            @font-face {
-              font-family: 'IBMPlexSans-Regular';
-              font-style: normal;
-              font-display: swap;
-              font-weight: 400;
-              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
-              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-            },
-            @font-face {
-              font-family: 'IBMPlexSans-Medium';
-              font-style: normal;
-              font-display: swap;
-              font-weight: 400;
-              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
-              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-            },
-            @font-face {
-              font-family: 'IBMPlexSans-SemiBold';
-              font-style: normal;
-              font-display: swap;
-              font-weight: 400;
-              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
-              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-            },
-            @font-face {
-              font-family: 'IBMPlexSans-Bold';
-              font-style: normal;
-              font-display: swap;
-              font-weight: 400;
-              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
-              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-            },
-            @font-face {
-              font-family: 'OpenSans-Regular';
-              font-style: normal;
-              font-display: swap;
-              font-weight: 400;
-              src: local('OpenSans-Regular'), url(${openSansRegular}) format('truetype');
-              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-            }
-          `,
-    },
+    // MuiCssBaseline: {
+    //   styleOverrides: `
+    //         @font-face {
+    //           font-family: 'IBMPlexSans-Regular';
+    //           font-style: normal;
+    //           font-display: swap;
+    //           font-weight: 400;
+    //           src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
+    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+    //         },
+    //         @font-face {
+    //           font-family: 'IBMPlexSans-Medium';
+    //           font-style: normal;
+    //           font-display: swap;
+    //           font-weight: 400;
+    //           src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
+    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+    //         },
+    //         @font-face {
+    //           font-family: 'IBMPlexSans-SemiBold';
+    //           font-style: normal;
+    //           font-display: swap;
+    //           font-weight: 400;
+    //           src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
+    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+    //         },
+    //         @font-face {
+    //           font-family: 'IBMPlexSans-Bold';
+    //           font-style: normal;
+    //           font-display: swap;
+    //           font-weight: 400;
+    //           src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
+    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+    //         },
+    //         @font-face {
+    //           font-family: 'OpenSans-Regular';
+    //           font-style: normal;
+    //           font-display: swap;
+    //           font-weight: 400;
+    //           src: local('OpenSans-Regular'), url(${openSansRegular}) format('truetype');
+    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+    //         }
+    //       `,
+    // },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -296,6 +316,7 @@ const otosenseTheme: ThemeOptions = createTheme({
         }, {
           props: {variant: 'text', color: 'secondary'},
           style: {
+            color: '#003965',
             ':hover': {
               backgroundColor: '#CBD4EB'
             }
@@ -318,7 +339,7 @@ const otosenseTheme: ThemeOptions = createTheme({
         },
         {
           props: {size: 'small'},
-          style: {minWidth: 170, minHeight: 45, width: 170}
+          style: {minWidth: 175, minHeight: 45, width: 175}
         },
         {
           props: {variant: 'filled', size: 'xsmall'},
@@ -338,7 +359,7 @@ const otosenseTheme: ThemeOptions = createTheme({
         },
         {
           props: {size: 'small'},
-          style: {maxWidth: 170}
+          style: {maxWidth: 175}
         },
         {
           props: {variant: 'outlined'},
@@ -420,6 +441,9 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
     },
     MuiTable: {
+      defaultProps: {
+        size: 'small'
+      },
       styleOverrides: {
         root: {
           fontFamily: '"IBMPlexSans-Regular", sans-serif'
@@ -444,6 +468,10 @@ const otosenseTheme: ThemeOptions = createTheme({
       styleOverrides: {
         root: {
           padding: 24,
+          fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
+          fontSize: 24,
+          textTransform: 'capitalize',
+          color: '#101820',
         }
       }
     },
@@ -537,6 +565,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       styleOverrides: {
         root: {
           paddingTop: 0,
+        }
+      }
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          fontSize: 14,
         }
       }
     }

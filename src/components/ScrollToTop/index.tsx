@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import otosenseTheme from '../../shared/theme';
 
 export const FloatingBtn = styled(Button)(({ theme }) => ({
-  width: 98,
+  width: 100,
   paddingRight: 14,
   borderRadius: '1.5rem',
   position: 'fixed',
