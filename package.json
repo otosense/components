@@ -1,6 +1,6 @@
 {
   "name": "@otosense/components",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -39,6 +39,7 @@
     "lib/**"
   ],
   "dependencies": {
+    "@mui/lab": "^5.0.0-alpha.64",
     "@types/webpack": "^5.28.0",
     "file-loader": "^6.2.0"
   }

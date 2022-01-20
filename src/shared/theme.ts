@@ -1,9 +1,9 @@
 import { ThemeOptions } from '@mui/material';
-// import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
-// import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
-// import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
-// import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
-// import openSansRegular from '../assets/OpenSans-Regular.ttf';
+import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
+import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
+import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
+import ibmPlexSansBold from '../assets/IBMPlexSans-Bold.ttf'
+import openSansRegular from '../assets/OpenSans-Regular.ttf';
 import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
@@ -15,12 +15,12 @@ declare module '@mui/material/styles' {
     xl: false;
   }
 }
-declare module '@mui/material/Icon'  {
+declare module '@mui/material/Icon' {
   interface IconPropsColorOverrides {
     gray: true;
   }
 }
-declare module '@mui/material/Box'  {
+declare module '@mui/material/Box' {
   interface BoxPropsColorOverrides {
     gray: true;
   }
@@ -40,7 +40,7 @@ declare module '@mui/material/InputBase' {
 //     whiteBg: true;
 //   }
 // }
-declare module '@mui/material/FormControl'{
+declare module '@mui/material/FormControl' {
   interface FormControlPropsSizeOverrides {
     xsmall: true;
   }
@@ -145,7 +145,7 @@ const otosenseTheme: ThemeOptions = createTheme({
   },
   typography: {
     htmlFontSize: 16,
-    fontFamily: '"IBMPlexSans-Regular", sans-serif',
+    fontFamily: '"IBMPlexSans-Regular", "IBMPlexSans-SemiBold", "IBMPlexSans-Bold", sans-serif',
     h1: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
@@ -162,13 +162,13 @@ const otosenseTheme: ThemeOptions = createTheme({
       // letterSpacing: '',
     },
     h3: {
-      'fontFamily': '"IBMPlexSans-Regular", sans-serif',
-      'fontSize': 20,
-      'lineHeight': '24px',
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 20,
+      lineHeight: '24px',
       color: '#101820',
-      '@media (min-width:600px)': {
-        fontSize: '1.5rem',
-      },
+      // '@media (min-width:600px)': {
+      //   fontSize: '1.5rem',
+      // },
       // letterSpacing: '',
     },
     h4: {
@@ -233,50 +233,50 @@ const otosenseTheme: ThemeOptions = createTheme({
         }
       }
     },
-    // MuiCssBaseline: {
-    //   styleOverrides: `
-    //         @font-face {
-    //           font-family: 'IBMPlexSans-Regular';
-    //           font-style: normal;
-    //           font-display: swap;
-    //           font-weight: 400;
-    //           src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
-    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-    //         },
-    //         @font-face {
-    //           font-family: 'IBMPlexSans-Medium';
-    //           font-style: normal;
-    //           font-display: swap;
-    //           font-weight: 400;
-    //           src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
-    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-    //         },
-    //         @font-face {
-    //           font-family: 'IBMPlexSans-SemiBold';
-    //           font-style: normal;
-    //           font-display: swap;
-    //           font-weight: 400;
-    //           src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
-    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-    //         },
-    //         @font-face {
-    //           font-family: 'IBMPlexSans-Bold';
-    //           font-style: normal;
-    //           font-display: swap;
-    //           font-weight: 400;
-    //           src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
-    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-    //         },
-    //         @font-face {
-    //           font-family: 'OpenSans-Regular';
-    //           font-style: normal;
-    //           font-display: swap;
-    //           font-weight: 400;
-    //           src: local('OpenSans-Regular'), url(${openSansRegular}) format('truetype');
-    //           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-    //         }
-    //       `,
-    // },
+    MuiCssBaseline: {
+      styleOverrides: `
+            @font-face {
+              font-family: 'IBMPlexSans-Regular';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-Regular'), local('IBMPlexSans-Regular'), url(${ibmPlexSansRegular}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'IBMPlexSans-Medium';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'), url(${ibmPlexSansMedium}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'IBMPlexSans-SemiBold';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansSemiBold}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'IBMPlexSans-Bold';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'), url(${ibmPlexSansBold}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            },
+            @font-face {
+              font-family: 'OpenSans-Regular';
+              font-style: normal;
+              font-display: swap;
+              font-weight: 400;
+              src: local('OpenSans-Regular'), url(${openSansRegular}) format('truetype');
+              unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+            }
+          `,
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -290,7 +290,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       variants: [
         {
-          props: {variant: 'contained', size: 'large'},
+          props: { variant: 'contained', size: 'large' },
           style: {
             fontSize: 20,
             minHeight: 60,
@@ -299,14 +299,14 @@ const otosenseTheme: ThemeOptions = createTheme({
             minWidth: 140,
           },
         }, {
-          props: {variant: 'contained', size: 'medium'},
+          props: { variant: 'contained', size: 'medium' },
           style: {
             fontSize: 14,
             minHeight: 45,
             minWidth: 100,
           },
         }, {
-          props: {variant: 'outlined', size: 'medium', color: 'primary'},
+          props: { variant: 'outlined', size: 'medium', color: 'primary' },
           style: {
             border: '2px solid #009fbd',
             fontSize: 14,
@@ -314,7 +314,7 @@ const otosenseTheme: ThemeOptions = createTheme({
             minWidth: 100,
           },
         }, {
-          props: {variant: 'text', color: 'secondary'},
+          props: { variant: 'text', color: 'secondary' },
           style: {
             color: '#003965',
             ':hover': {
@@ -322,8 +322,8 @@ const otosenseTheme: ThemeOptions = createTheme({
             }
           }
         }, {
-          props: {size: 'medium'},
-          style: {height: 45}
+          props: { size: 'medium' },
+          style: { height: 45 }
         }
       ],
     },
@@ -334,16 +334,16 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       variants: [
         {
-          props: {variant: 'filled', size: 'medium'},
-          style: { minWidth: 315, height: 45},
+          props: { variant: 'filled', size: 'medium' },
+          style: { minWidth: 315, height: 45 },
         },
         {
-          props: {size: 'small'},
-          style: {minWidth: 175, minHeight: 45, width: 175}
+          props: { size: 'small' },
+          style: { minWidth: 175, minHeight: 45, width: 175 }
         },
         {
-          props: {variant: 'filled', size: 'xsmall'},
-          style: {minWidth: 100, height: 45}
+          props: { variant: 'filled', size: 'xsmall' },
+          style: { minWidth: 100, height: 45 }
         }
       ],
     },
@@ -354,28 +354,28 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       variants: [
         {
-          props: {variant: 'filled', size: 'medium'},
-          style: {height: 45, minWidth: 315}
+          props: { variant: 'filled', size: 'medium' },
+          style: { height: 45, minWidth: 315 }
         },
         {
-          props: {size: 'small'},
-          style: {maxWidth: 175}
+          props: { size: 'small' },
+          style: { maxWidth: 175 }
         },
         {
-          props: {variant: 'outlined'},
-          style: {height: 45}
+          props: { variant: 'outlined' },
+          style: { height: 45 }
         }
       ],
     },
     MuiTypography: {
       variants: [
         {
-          props: {variant: 'overline'},
-          style: {textTransform: 'capitalize', marginBottom: 7, lineHeight: 'initial', fontSize: 14},
+          props: { variant: 'overline' },
+          style: { textTransform: 'capitalize', marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
         },
         {
-          props: {variant: 'caption'},
-          style: {fontSize: 14},
+          props: { variant: 'caption' },
+          style: { fontSize: 14 },
         },
       ],
       defaultProps: {
@@ -429,6 +429,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           '&:hover': {
             backgroundColor: '#fff',
           },
+          'fontFamily': '"IBMPlexSans-Regular", sans-serif',
         },
       },
     },
@@ -485,8 +486,8 @@ const otosenseTheme: ThemeOptions = createTheme({
     MuiInput: {
       variants: [
         {
-          props: {size: 'medium'},
-          style: {minHeight: 45}
+          props: { size: 'medium' },
+          style: { minHeight: 45 }
         }
       ]
     },
@@ -504,12 +505,12 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       variants: [
         {
-          props: {size: 'medium'},
-          style: {minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%'}
+          props: { size: 'medium' },
+          style: { minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%' }
         },
         {
-          props: {size: 'small'},
-          style: {minHeight: 45}
+          props: { size: 'small' },
+          style: { minHeight: 45 }
         },
       ]
     },
@@ -521,8 +522,8 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       variants: [
         {
-          props: {size: 'medium'},
-          style: {height: 45}
+          props: { size: 'medium' },
+          style: { height: 45 }
         },
       ]
     },
