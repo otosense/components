@@ -1,4 +1,4 @@
-import { ThemeOptions } from '@mui/material';
+// import { ThemeOptions } from '@mui/material';
 import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
 import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
 import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
@@ -27,14 +27,26 @@ declare module '@mui/material/Box' {
     accent: true;
   }
 }
-// declare module '@mui/material/TextField'  {
-//   interface TextFieldPropsColorOverrides {
-//     whiteBg: true;
-//   }
-// }
+declare module "@mui/material/styles/createTypography" {
+  interface Typography {
+    link: React.CSSProperties;
+  }
+
+  // allow configuration using `createMuiTheme`
+  interface TypographyOptions {
+    link?: React.CSSProperties;
+  }
+}
+
+declare module "@mui//material/Typography/Typography" {
+  interface TypographyPropsVariantOverrides {
+    link: true;
+  }
+}
 declare module '@mui/material/InputBase' {
   interface InputBasePropsColorOverrides {
     whiteBg: true;
+    accent: true;
   }
 }
 // declare module '@mui/material/FilledInput' {
@@ -44,6 +56,11 @@ declare module '@mui/material/InputBase' {
 // }
 declare module '@mui/material/FormControl' {
   interface FormControlPropsSizeOverrides {
+    xsmall: true;
+  }
+}
+declare module '@mui/material/TextField' {
+  interface TextFieldPropsSizeOverrides {
     xsmall: true;
   }
 }
@@ -72,11 +89,12 @@ declare module '@mui/material/styles' {
     cancel: PaletteOptions['primary'];
     critical: PaletteOptions['primary'];
     gray: PaletteOptions['primary'];
+    whiteBg: PaletteOptions['primary'];
     accent: PaletteOptions['primary'];
   }
 }
 
-const otosenseTheme: ThemeOptions = createTheme({
+let otosenseTheme2022 = createTheme({
   palette: {
     primary: {
       main: '#009fbd',
@@ -119,7 +137,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       dark: '#CC4734',
     },
     warning: {
-      main: '#FED141',
+      main: '#ED6C02',
       contrastText: '#101820'
     },
     info: {
@@ -136,12 +154,12 @@ const otosenseTheme: ThemeOptions = createTheme({
     },
     background: {
       paper: '#fff',
-      default: '#F3F3F3',
+      default: '#f3f3f3',
     },
     text: {
       primary: '#101820',
       secondary: '#767989',
-      disabled: '#BDBFCA',
+      disabled: '#A9ABB7',
     },
   },
   breakpoints: {
@@ -158,56 +176,86 @@ const otosenseTheme: ThemeOptions = createTheme({
     fontFamily: '"IBMPlexSans-Regular", "IBMPlexSans-SemiBold", "IBMPlexSans-Bold", "OpenSans-Regular", sans-serif',
     h1: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
-      fontSize: 32,
-      lineHeight: '40px',
+      fontSize: 24,
+      lineHeight: 1,
       color: '#101820',
-      // letterSpacing: '',
+      '@media (min-width:1280px)': {
+        fontSize: 32,
+      },
     },
     h2: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
-      fontSize: 24,
-      lineHeight: '32px',
+      fontSize: 20,
+      lineHeight: 1,
       textTransform: 'capitalize',
       color: '#101820',
-      // letterSpacing: '',
+      '@media (min-width:1280px)': {
+        fontSize: 24,
+      },
     },
     h3: {
-      fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 20,
-      lineHeight: '24px',
+      fontFamily: '"IBMPlexSans-Medium", sans-serif',
+      fontSize: 18,
+      lineHeight: 1.75,
+      textTransform: 'capitalize',
       color: '#101820',
-      // '@media (min-width:600px)': {
-      //   fontSize: '1.5rem',
-      // },
+      '@media (min-width:1280px)': {
+        fontSize: 20,
+      },
       // letterSpacing: '',
     },
     h4: {
-      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
-      fontSize: 18,
+      fontFamily: '"IBMPlexSans-Medium", sans-serif',
+      fontSize: 16,
+      lineHeight: 1,
       color: '#101820',
-      lineHeight: '24px',
+      '@media (min-width:1280px)': {
+        fontSize: 18,
+      },
     },
     h5: {
-      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
-      fontSize: 16,
+      fontFamily: '"IBMPlexSans-Medium", sans-serif',
+      fontSize: 14,
+      lineHeight: 1,
       color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 16,
+      },
     },
     body1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 16,
-      lineHeight: '',
+      fontSize: 14,
+      lineHeight: 1.5,
       letterSpacing: '',
       color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 16,
+      },
+    },
+    body2: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 16,
+      lineHeight: 1.5,
+      letterSpacing: '',
+      color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 18,
+      },
     },
     subtitle1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
+      lineHeight: 1.75,
       textTransform: 'capitalize',
       color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 20,
+      },
     },
     subtitle2: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 24,
+      lineHeight: 1,
       textTransform: 'capitalize',
       color: '#101820',
     },
@@ -218,14 +266,21 @@ const otosenseTheme: ThemeOptions = createTheme({
     },
     overline: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 14,
+      fontSize: '16px !important',
+      // lineHeight: 1,
       color: '#101820',
     },
     button: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 16,
-      // lineHeight: '',
+      lineHeight: 1,
       letterSpacing: 1,
+    },
+    link: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      color: '#009fbd',
+      textDecoration: 'underline',
+      cursor: 'pointer'
     },
   },
   shape: {
@@ -292,13 +347,11 @@ const otosenseTheme: ThemeOptions = createTheme({
         root: {
           textTransform: 'capitalize',
           width: 'auto',
-          fontSize: 16,
         },
       },
       defaultProps: {
         variant: 'contained',
         disableElevation: true,
-        size: 'medium',
       },
       variants: [
         {
@@ -311,19 +364,9 @@ const otosenseTheme: ThemeOptions = createTheme({
             minWidth: 140,
           },
         }, {
-          props: { variant: 'contained', size: 'medium' },
-          style: {
-            fontSize: 16,
-            minHeight: 45,
-            minWidth: 100,
-          },
-        }, {
           props: { variant: 'outlined', size: 'medium', color: 'primary' },
           style: {
             border: '2px solid #009fbd',
-            fontSize: 16,
-            minHeight: 40,
-            minWidth: 100,
           },
         }, {
           props: { variant: 'text', color: 'secondary' },
@@ -335,7 +378,7 @@ const otosenseTheme: ThemeOptions = createTheme({
           }
         }, {
           props: { size: 'medium' },
-          style: { height: 45 }
+          style: { height: 45, fontSize: 16, minWidth: 100 }
         }
       ],
     },
@@ -376,6 +419,10 @@ const otosenseTheme: ThemeOptions = createTheme({
         {
           props: { variant: 'outlined' },
           style: { height: 45 }
+        },
+        {
+          props: { size: 'xsmall' },
+          style: { height: 100 }
         }
       ],
     },
@@ -459,14 +506,26 @@ const otosenseTheme: ThemeOptions = createTheme({
       },
       styleOverrides: {
         root: {
-          fontFamily: '"IBMPlexSans-Regular", sans-serif'
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
+          fontSize: 18,
+          '@media (max-width:1280px)': {
+            fontSize: 16,
+          },
         },
       }
     },
     MuiTableCell: {
       styleOverrides: {
         head: {
-          color: '#767989'
+          color: '#757575',
+          fontSize: 18,
+          '@media (max-width:1280px)': {
+            fontSize: 16,
+          },
+          textTransform: 'capitalize',
+        },
+        root: {
+          fontSize: 18,
         }
       }
     },
@@ -491,7 +550,8 @@ const otosenseTheme: ThemeOptions = createTheme({
     MuiSelect: {
       styleOverrides: {
         filled: {
-          padding: 0, margin: 'auto'
+          padding: 0, margin: 'auto',
+          height: 45,
         }
       }
     },
@@ -499,7 +559,7 @@ const otosenseTheme: ThemeOptions = createTheme({
       variants: [
         {
           props: { size: 'medium' },
-          style: { minHeight: 45 }
+          style: { height: 45, maxHeight: 45, }
         }
       ]
     },
@@ -587,8 +647,10 @@ const otosenseTheme: ThemeOptions = createTheme({
           fontSize: 14,
         }
       }
-    }
+    },
   },
 });
-export default otosenseTheme;
+
+// otosenseTheme2022 = responsiveFontSizes(otosenseTheme2022);
+export default otosenseTheme2022;
 

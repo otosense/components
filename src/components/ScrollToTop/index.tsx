@@ -1,24 +1,24 @@
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Button from '@mui/material/Button';
-import { styled, ThemeProvider } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import React, { useEffect, useState } from 'react';
-import otosenseTheme from '../../shared/theme';
+import otosenseTheme2022 from '../../shared/theme2022';
 
-export const FloatingBtn = styled(Button)(({ theme }) => ({
-  width: 100,
-  paddingRight: 14,
-  borderRadius: '1.5rem',
+export const FloatingBtn = styled(Button)({
+  width: 110,
+  borderRadius: 23,
   position: 'fixed',
   right: '2rem',
   bottom: '1rem',
-  paddingTop: 12,
-  paddingBottom: 12,
-  color: theme.palette.secondary.contrastText,
+  height: 45,
+  fontSize: 18,
+  textTransform: 'capitalize',
+  color: otosenseTheme2022.palette.secondary.contrastText,
   backgroundColor: '#fff',
   '&:hover': {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: otosenseTheme2022.palette.secondary.main,
   },
-}));
+});
 
 interface IProps {
   text: string;
@@ -46,7 +46,7 @@ const ScrollToTopBtn = (props: IProps) => {
     setScrollHeight(maxHeight);
   }, []);
   return (
-    <ThemeProvider theme={otosenseTheme}>
+    <>
       {scrollHeight > window.innerHeight && (
         <FloatingBtn
           variant="text"
@@ -59,7 +59,7 @@ const ScrollToTopBtn = (props: IProps) => {
           {text}
         </FloatingBtn>
       )}
-    </ThemeProvider>
+    </>
   );
 };
 
