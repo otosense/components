@@ -254,15 +254,19 @@ let otosenseTheme2022 = createTheme({
     },
     subtitle2: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 24,
+      fontSize: 20,
       lineHeight: 1,
       textTransform: 'capitalize',
       color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 24,
+      },
     },
     caption: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 14,
       color: '#101820',
+      
     },
     overline: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
@@ -551,7 +555,7 @@ let otosenseTheme2022 = createTheme({
       styleOverrides: {
         filled: {
           padding: 0, margin: 'auto',
-          height: 45,
+          height: 'auto',
         }
       }
     },
@@ -578,7 +582,7 @@ let otosenseTheme2022 = createTheme({
       variants: [
         {
           props: { size: 'medium' },
-          style: { minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%' }
+          style: { minHeight: 45, paddingLeft: 5, paddingTop: 0, paddingBottom: 0, paddingRigght: 0, margin: 'auto', width: '100%', height: '100%', display: 'flex', alignItems: 'center' }
         },
         {
           props: { size: 'small' },

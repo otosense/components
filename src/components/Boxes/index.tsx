@@ -40,3 +40,28 @@ export const mediumText: CSSProperties = {
   fontFamily: '"IBMPlexSans-Medium", sans-serif'
 }
 
+export const TextLink = styled(Box)(({theme}) => ({
+  color: theme.palette.primary.main,
+  textDecoration: 'underline',
+  cursor: 'pointer'
+}));
+
+export const Capital = styled(Box)({
+  textTransform: 'capitalize'
+});
+
+
+export const UlNoM = styled('ul')({
+  margin: 0,
+});
+
+export const Box135 = styled(Box)({
+  textTransform: 'capitalize',
+  width: 135,
+  fontFamily: '"IBMPlexSans-Regular", sans-serif'
+});
+export const TitleBox70 = styled(Box)({
+  textTransform: 'capitalize',
+  display: 'inline-block',
+  width: 70,
+});

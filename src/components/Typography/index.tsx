@@ -19,3 +19,9 @@ export const ErrorText: CSSProperties = {
 //   textDecoration: 'underline',
 //   cursor: 'pointer'
 // }));
+
+// export const Box135 = styled(Typography)({
+//   textTransform: 'capitalize',
+//   width: 135,
+// });
+

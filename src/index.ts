@@ -4,7 +4,7 @@ import otosenseTheme from './shared/theme';
 import otosenseTheme2022 from './shared/theme2022';
 import OtoModal from './components/OtoModal';
 import ScrollToTopBtn from './components/ScrollToTop'
-import { FlexBox, TextIconBox, FormBox, CenterBox, FlexSpaceBet, semiBoldText, mediumText, BlockBox } from './components/Boxes';
+import { FlexBox, TextIconBox, FormBox, CenterBox, FlexSpaceBet, semiBoldText, mediumText, BlockBox, TextLink, Capital, UlNoM, Box135, TitleBox70 } from './components/Boxes';
 import { MainWrapper, MainContainer, MainBody } from './components/Layout/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavTab from './components/NavTab';
@@ -14,11 +14,17 @@ import OtoSwitch from './components/Toggle';
 import { SuccessText, ErrorText } from './components/Typography'
 import TabForTable from './components/TabForTable'
 import { TableCellL } from './components/TableCellL'
-// import OtoFormControlSelect from './components/FormControlSelect'
+import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon } from './components/Tables'
 export {
-  // StyledSelectField,
-  // StyledTextField,
-  // OtoFormControlSelect,
+  TableCellIcon,
+  TableCellComment,
+  TableInGrid,
+  TableCellNoBorder,
+  Capital,
+  UlNoM,
+  TextLink,
+  Box135,
+  TitleBox70,
   TableCellL,
   BlockBox,
   CenterBox,
