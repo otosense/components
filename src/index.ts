@@ -14,7 +14,6 @@ import NavTabL from './components/NabTabL';
 import OtoSwitch from './components/Toggle';
 import { SuccessText, ErrorText } from './components/Typography'
 import TabForTable from './components/TabForTable'
-import { TableCellL } from './components/TableCellL'
 import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon } from './components/Tables'
 export {
   otosenseTheme2022_recording,
@@ -29,7 +28,6 @@ export {
   Box135,
   Box125,
   TitleBox70,
-  TableCellL,
   BlockBox,
   CenterBox,
   TabForTable,
