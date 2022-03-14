@@ -12,6 +12,10 @@ export const FlexBox = styled(Box)({
   display: 'flex',
   alignItems: 'center'
 });
+export const FlexBoxBaseline = styled(Box)({
+  display: 'flex',
+  alignItems: 'baseline'
+});
 
 export const FormBox = styled(Box)({
   display: 'flex',
@@ -58,6 +62,13 @@ export const UlNoM = styled('ul')({
 export const Box135 = styled(Box)({
   textTransform: 'capitalize',
   width: 135,
+  minWidth: 135,
+  fontFamily: '"IBMPlexSans-Regular", sans-serif'
+});
+export const Box125 = styled(Box)({
+  textTransform: 'capitalize',
+  width: 125,
+  minWidth: 125,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
 export const TitleBox70 = styled(Box)({

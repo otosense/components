@@ -2,9 +2,10 @@ import Header from './components/Header';
 import Header2022 from './components/Header2022'
 import otosenseTheme from './shared/theme';
 import otosenseTheme2022 from './shared/theme2022';
+import otosenseTheme2022_recording from './shared/theme2022_recording'
 import OtoModal from './components/OtoModal';
 import ScrollToTopBtn from './components/ScrollToTop'
-import { FlexBox, TextIconBox, FormBox, CenterBox, FlexSpaceBet, semiBoldText, mediumText, BlockBox, TextLink, Capital, UlNoM, Box135, TitleBox70 } from './components/Boxes';
+import { FlexBox, TextIconBox, FormBox, CenterBox, FlexSpaceBet, semiBoldText, mediumText, BlockBox, TextLink, Capital, UlNoM, Box135, TitleBox70, FlexBoxBaseline, Box125 } from './components/Boxes';
 import { MainWrapper, MainContainer, MainBody } from './components/Layout/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavTab from './components/NavTab';
@@ -16,6 +17,8 @@ import TabForTable from './components/TabForTable'
 import { TableCellL } from './components/TableCellL'
 import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon } from './components/Tables'
 export {
+  otosenseTheme2022_recording,
+  FlexBoxBaseline,
   TableCellIcon,
   TableCellComment,
   TableInGrid,
@@ -24,6 +27,7 @@ export {
   UlNoM,
   TextLink,
   Box135,
+  Box125,
   TitleBox70,
   TableCellL,
   BlockBox,

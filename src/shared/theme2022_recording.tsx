@@ -1,3 +1,4 @@
+// import { ThemeOptions } from '@mui/material';
 import ibmPlexSansMedium from '../assets/IBMPlexSans-Medium.ttf';
 import ibmPlexSansRegular from '../assets/IBMPlexSans-Regular.ttf';
 import ibmPlexSansSemiBold from '../assets/IBMPlexSans-SemiBold.ttf';
@@ -93,7 +94,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-let otosenseTheme2022 = createTheme({
+const otosenseTheme2022_recording = createTheme({
   palette: {
     primary: {
       main: '#009fbd',
@@ -175,35 +176,44 @@ let otosenseTheme2022 = createTheme({
     fontFamily: '"IBMPlexSans-Regular", "IBMPlexSans-SemiBold", "IBMPlexSans-Bold", "OpenSans-Regular", sans-serif',
     h1: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
+      fontSize: 32,
+      lineHeight: 1,
+      color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 42,
+      },
+    },
+    h2: {
+      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 24,
       lineHeight: 1,
+      textTransform: 'capitalize',
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 32,
       },
     },
-    h2: {
-      fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
+    h3: {
+      fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 20,
-      lineHeight: 1,
+      lineHeight: 1.5,
       textTransform: 'capitalize',
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 24,
       },
+      // letterSpacing: '',
     },
-    h3: {
+    h4: {
       fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 18,
-      lineHeight: 1.5,
-      textTransform: 'capitalize',
+      lineHeight: 1,
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 20,
       },
-      // letterSpacing: '',
     },
-    h4: {
+    h5: {
       fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 16,
       lineHeight: 1,
@@ -212,7 +222,7 @@ let otosenseTheme2022 = createTheme({
         fontSize: 18,
       },
     },
-    h5: {
+    h6: {
       fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 14,
       lineHeight: 1,
@@ -223,22 +233,22 @@ let otosenseTheme2022 = createTheme({
     },
     body1: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 14,
-      lineHeight: 1.5,
-      letterSpacing: '',
-      color: '#101820',
-      '@media (min-width:1280px)': {
-        fontSize: 16,
-      },
-    },
-    body2: {
-      fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 16,
       lineHeight: 1.5,
       letterSpacing: '',
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 18,
+      },
+    },
+    body2: {
+      fontFamily: '"IBMPlexSans-Regular", sans-serif',
+      fontSize: 18,
+      lineHeight: 1.5,
+      letterSpacing: '',
+      color: '#101820',
+      '@media (min-width:1280px)': {
+        fontSize: 20,
       },
     },
     subtitle1: {
@@ -263,7 +273,7 @@ let otosenseTheme2022 = createTheme({
     },
     caption: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
-      fontSize: 14,
+      fontSize: 1,
       color: '#101820',
       
     },
@@ -425,7 +435,7 @@ let otosenseTheme2022 = createTheme({
         },
         {
           props: { size: 'xsmall' },
-          style: { height: 100 }
+          style: { height: 45, width: 100 }
         }
       ],
     },
@@ -488,6 +498,7 @@ let otosenseTheme2022 = createTheme({
           'paddingRight': '1rem',
           'textTransform': 'capitalize',
           'backgroundColor': '#f3f3f3',
+          'fontSize': '20px',
           '&:hover': {
             backgroundColor: '#fff',
           },
@@ -512,7 +523,7 @@ let otosenseTheme2022 = createTheme({
           fontFamily: '"IBMPlexSans-Regular", sans-serif',
           fontSize: 18,
           '@media (max-width:1280px)': {
-            fontSize: 16,
+            fontSize: 20,
           },
         },
       }
@@ -521,15 +532,14 @@ let otosenseTheme2022 = createTheme({
       styleOverrides: {
         head: {
           color: '#757575',
-          fontSize: 18,
+          // fontSize: 18,
           '@media (max-width:1280px)': {
-            fontSize: 16,
+            // fontSize: 16,
           },
           textTransform: 'capitalize',
         },
         root: {
-          fontSize: 18,
-          borderBottom: 'none'
+          borderBottom: 'none',
         }
       }
     },
@@ -655,9 +665,16 @@ let otosenseTheme2022 = createTheme({
         }
       }
     },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          fontSize: 18,
+        }
+      }
+    }
   },
 });
 
 // otosenseTheme2022 = responsiveFontSizes(otosenseTheme2022);
-export default otosenseTheme2022;
+export default otosenseTheme2022_recording;
 

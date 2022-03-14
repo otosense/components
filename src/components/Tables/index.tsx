@@ -18,11 +18,8 @@ export const TableCellComment = styled(TableCell)({
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-  paddingLeft: 0,
+  padding: '6px 16px',
   fontSize: 18,
-  paddingRight: '8px',
-  paddingTop: 0,
-  paddingBottom: 0,
 })
 
 export const TableCellIcon = styled(TableCell)({
