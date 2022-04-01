@@ -76,3 +76,8 @@ export const TitleBox70 = styled(Box)({
   display: 'inline-block',
   width: 70,
 });
+export const Box150 = styled(Box)({
+  width: 150,
+  display: 'inline-block',
+  textTransform: 'capitalize'
+});

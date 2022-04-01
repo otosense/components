@@ -529,10 +529,17 @@ let otosenseTheme2022 = createTheme({
         },
         root: {
           fontSize: 18,
-          borderBottom: 'none'
+          borderBottom: '1px solid rgba(224, 224, 224, 1)'
         }
       }
     },
+    // MuiTableRow: {
+    //   styleOverrides: {
+    //     root: {
+    //       borderBottom: '1px solid rgba(224, 224, 224, 1)'
+    //     }
+    //   }
+    // },
     MuiDialogActions: {
       styleOverrides: {
         root: {

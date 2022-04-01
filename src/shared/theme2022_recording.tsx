@@ -539,10 +539,24 @@ const otosenseTheme2022_recording = createTheme({
           textTransform: 'capitalize',
         },
         root: {
-          borderBottom: 'none',
+          borderBottom: '1px solid rgba(224, 224, 224, 1)',
         }
       }
     },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          borderBottom: '1px solid rgba(224, 224, 224, 1)'
+        }
+      }
+    },
+    // MuiTableRow: {
+    //   styleOverrides: {
+    //     root: {
+    //       borderBottom: '1px solid rgba(224, 224, 224, 1)'
+    //     }
+    //   }
+    // },
     MuiDialogActions: {
       styleOverrides: {
         root: {
@@ -642,6 +656,9 @@ const otosenseTheme2022_recording = createTheme({
         action: {
           padding: 0,
         },
+        outlined: {
+          border: 'none'
+        }
       },
     },
     MuiAutocomplete: {
