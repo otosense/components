@@ -2,7 +2,7 @@
 // import { styled } from '@mui/material/styles';
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-import { virtualInputWrapper, virtualInputContainer, closeIconStyle} from './styles';
+import { virtualInputWrapper, virtualInputContainer, closeIconStyle, helperText } from './styles';
 import CloseIcon from '@mui/icons-material/Close';
 import otosenseTheme2022 from '../../shared/theme2022'
 
@@ -23,9 +23,9 @@ const VirtualInputContainer = (props: IProps) => {
     <Box sx={virtualInputWrapper}>
       <Box sx={virtualInputContainer}>
         <Box onClick={onClose} sx={closeIconStyle} >
-        <CloseIcon sx={{width: 40, height: 40}} />
+        <CloseIcon sx={{width: 30, height: 30}} />
           {text &&
-          <Typography variant="h2" component="span">{text}</Typography>
+          <Typography component="span" sx={helperText}>{text}</Typography>
           }
         </Box>
         {children}

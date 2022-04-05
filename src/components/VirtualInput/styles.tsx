@@ -17,28 +17,23 @@ export const virtualInputContainer: CSSProperties = {
   display: 'flex',
   position: 'relative',
   top: 100,
-  alignItems: 'center',
+  alignItems: 'flex-end',
   justifyContent: 'center',
   width: 'auto',
   maxWidth: 400,
   minWidth: 100,
-  margin: 'auto'
+  margin: 'auto',
+  flexDirection: 'column'
 }
 
 export const helperText: CSSProperties = {
-  position: 'fixed',
-  top: 200,
-  display: 'flex',
-  justifyContent: 'center',
-  width: '100%',
-  color: '#fff'
+  fontSize: 24,
+  fontWeight: 500,
 }
 
 export const closeIconStyle: CSSProperties = {
-  position: 'fixed',
-  top: 100,
-  right: 250,
   cursor: 'pointer',
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
+  marginBottom: 0.6,
 }
