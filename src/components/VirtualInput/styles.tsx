@@ -35,5 +35,5 @@ export const closeIconStyle: CSSProperties = {
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
-  marginBottom: 0.6,
+  marginBottom: '24px',
 }
