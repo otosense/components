@@ -225,7 +225,6 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 14,
       lineHeight: 1.5,
-      letterSpacing: '',
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 16,
@@ -658,13 +657,15 @@ let otosenseTheme2022 = createTheme({
     MuiTooltip: {
       styleOverrides: {
         tooltip: {
-          fontSize: 14,
+          fontSize: 16,
+          backgroundColor: '#003965',
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
         }
+        
       }
     },
   },
 });
 
-// otosenseTheme2022 = responsiveFontSizes(otosenseTheme2022);
 export default otosenseTheme2022;
 
