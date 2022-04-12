@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material/styles';
 import otosenseTheme2022 from '../../shared/theme2022';
 
-const LinearProgressWithLabel = (props: LinearProgressProps & { value: number }) => {
+const LinerProgressWithLabel = (props: LinearProgressProps & { value: number }) => {
   return (
     <ThemeProvider theme={otosenseTheme2022}>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -23,4 +23,4 @@ const LinearProgressWithLabel = (props: LinearProgressProps & { value: number })
   );
 }
 
-export default LinearProgressWithLabel;
+export default LinerProgressWithLabel;

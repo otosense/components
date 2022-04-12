@@ -16,12 +16,12 @@ import { SuccessText, ErrorText } from './components/Typography';
 import TabForTable from './components/TabForTable';
 import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon } from './components/Tables';
 import VirtualInputContainer from './components/VirtualInput';
-import LinearProgressWithLabel from './components/LinerProgress';
+import LinerProgressWithLabel from './components/LinerProgress';
 import InfoTextWithTooltip from './components/InfoTextWithTooltip'
 
 export {
   InfoTextWithTooltip,
-  LinearProgressWithLabel,
+  LinerProgressWithLabel,
   VirtualInputContainer,
   Box150,
   otosenseTheme2022_recording,
