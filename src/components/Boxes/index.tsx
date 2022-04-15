@@ -65,6 +65,12 @@ export const Box135 = styled(Box)({
   minWidth: 135,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
+export const Box140 = styled(Box)({
+  textTransform: 'capitalize',
+  width: 140,
+  minWidth: 140,
+  fontFamily: '"IBMPlexSans-Regular", sans-serif'
+});
 export const Box125 = styled(Box)({
   textTransform: 'capitalize',
   width: 125,

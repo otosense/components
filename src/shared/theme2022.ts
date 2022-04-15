@@ -528,7 +528,8 @@ let otosenseTheme2022 = createTheme({
         },
         root: {
           fontSize: 18,
-          borderBottom: '1px solid rgba(224, 224, 224, 1)'
+          borderBottom: '1px solid rgba(224, 224, 224, 1)',
+          backgroundColor: '#fff',
         }
       }
     },
