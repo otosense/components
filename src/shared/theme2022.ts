@@ -520,6 +520,7 @@ let otosenseTheme2022 = createTheme({
       styleOverrides: {
         head: {
           color: '#757575',
+          backgroundColor: '#fff',
           fontSize: 18,
           '@media (max-width:1280px)': {
             fontSize: 16,
@@ -529,7 +530,6 @@ let otosenseTheme2022 = createTheme({
         root: {
           fontSize: 18,
           borderBottom: '1px solid rgba(224, 224, 224, 1)',
-          backgroundColor: '#fff',
         }
       }
     },
