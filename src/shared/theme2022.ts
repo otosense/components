@@ -131,7 +131,7 @@ let otosenseTheme2022 = createTheme({
       dark: '#000',
     },
     error: {
-      main: '#CC4734',
+      main: '#bd1e00',
       contrastText: '#fff',
       dark: '#CC4734',
     },
@@ -144,7 +144,7 @@ let otosenseTheme2022 = createTheme({
       contrastText: '#101820',
     },
     success: {
-      main: '#1db381',
+      main: '#00aa55',
       contrastText: '#101820'
     },
     whiteBg: {
@@ -424,7 +424,7 @@ let otosenseTheme2022 = createTheme({
         },
         {
           props: { size: 'xsmall' },
-          style: { height: 100 }
+          style: { height: 45, maxWidth: 100, minWidth: 80 }
         }
       ],
     },
@@ -520,7 +520,6 @@ let otosenseTheme2022 = createTheme({
       styleOverrides: {
         head: {
           color: '#757575',
-          backgroundColor: '#fff',
           fontSize: 18,
           '@media (max-width:1280px)': {
             fontSize: 16,
@@ -543,7 +542,7 @@ let otosenseTheme2022 = createTheme({
     MuiDialogActions: {
       styleOverrides: {
         root: {
-          paddingLef: 24,
+          paddingLeft: 24,
           paddingRight: 24,
           paddingTop: 0,
           paddingBottom: 24,
@@ -652,6 +651,12 @@ let otosenseTheme2022 = createTheme({
       styleOverrides: {
         root: {
           paddingTop: 0,
+        },
+        input: {
+          '&:-webkit-autofill': {
+            transitionDelay: '9999s',
+            transitionProperty: 'background-color, color',
+          }
         }
       }
     },
@@ -661,6 +666,8 @@ let otosenseTheme2022 = createTheme({
           fontSize: 16,
           backgroundColor: '#003965',
           fontFamily: '"IBMPlexSans-Regular", sans-serif',
+          width: 'max-content',
+          maxWidth: 400,
         }
         
       }

@@ -31,3 +31,6 @@ export const tableCellIcon: CSSProperties = {
   verticalAlign: 'middle',
   width: 24
 }
+export const TableCellHead = styled(TableCell)({
+  background: '#fff',
+})

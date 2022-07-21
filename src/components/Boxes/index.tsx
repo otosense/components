@@ -81,6 +81,7 @@ export const TitleBox70 = styled(Box)({
   textTransform: 'capitalize',
   display: 'inline-block',
   width: 70,
+  fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
 export const Box150 = styled(Box)({
   width: 150,
