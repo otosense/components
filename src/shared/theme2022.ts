@@ -667,7 +667,6 @@ let otosenseTheme2022 = createTheme({
           backgroundColor: '#003965',
           fontFamily: '"IBMPlexSans-Regular", sans-serif',
           width: 'max-content',
-          maxWidth: 400,
         }
         
       }

@@ -19,7 +19,9 @@ import VirtualInputContainer from './components/VirtualInput';
 import LinearProgressWithLabel from './components/LinearProgressWithLabel';
 import InfoTextWithTooltip from './components/InfoTextWithTooltip'
 import { commentStyle, saveBtnStyle } from './components/CustomAutofill'
+import { NoMaxWidthTooltip } from './components/ToolTips'
 export {
+  NoMaxWidthTooltip,
   commentStyle,
   saveBtnStyle,
   TableCellHead,

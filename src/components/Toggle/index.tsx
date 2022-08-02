@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { Switch, SwitchProps } from '@mui/material';
-import React from 'react'
+import React from 'react';
 // import { ThemeProvider } from '@mui/material/styles';
 import { otosenseTheme2022 } from '../..';
 
