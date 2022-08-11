@@ -28,12 +28,12 @@ declare module '@mui/material/Box' {
 }
 declare module "@mui/material/styles/createTypography" {
   interface Typography {
-    link: React.CSSProperties;
+    link: CSSProperties | {[key: string]: CSSProperties};
   }
 
   // allow configuration using `createMuiTheme`
   interface TypographyOptions {
-    link?: React.CSSProperties;
+    link?: CSSProperties | {[key: string]: CSSProperties};
   }
 }
 
@@ -181,12 +181,17 @@ let otosenseTheme2022 = createTheme({
       '@media (min-width:1280px)': {
         fontSize: 32,
       },
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
     },
     h2: {
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 20,
       lineHeight: 1,
-      textTransform: 'capitalize',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 24,
@@ -196,7 +201,9 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 18,
       lineHeight: 1.5,
-      textTransform: 'capitalize',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 20,
@@ -244,7 +251,9 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
       lineHeight: 1.5,
-      textTransform: 'capitalize',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 20,
@@ -254,7 +263,9 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 20,
       lineHeight: 1,
-      textTransform: 'capitalize',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 24,
@@ -264,12 +275,17 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 14,
       color: '#101820',
-      
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
     },
     overline: {
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: '16px !important',
-      // lineHeight: 1,
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
     },
     button: {
@@ -279,10 +295,13 @@ let otosenseTheme2022 = createTheme({
       letterSpacing: 1,
     },
     link: {
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       color: '#009fbd',
       textDecoration: 'underline',
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
   },
   shape: {
@@ -432,7 +451,9 @@ let otosenseTheme2022 = createTheme({
       variants: [
         {
           props: { variant: 'overline' },
-          style: { textTransform: 'capitalize', marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
+          style: { '::first-letter': {
+            textTransform: 'uppercase',
+          }, marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
         },
         {
           props: { variant: 'caption' },
@@ -457,7 +478,9 @@ let otosenseTheme2022 = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           fontFamily: '"OpenSans-Regular", sans-serif',
         },
       },
@@ -465,7 +488,9 @@ let otosenseTheme2022 = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           fontFamily: '"OpenSans-Regular", sans-serif',
           fontSize: 18,
           color: '#101820',
@@ -524,7 +549,9 @@ let otosenseTheme2022 = createTheme({
           '@media (max-width:1280px)': {
             fontSize: 16,
           },
-          textTransform: 'capitalize',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
         },
         root: {
           fontSize: 18,

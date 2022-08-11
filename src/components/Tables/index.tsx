@@ -31,6 +31,15 @@ export const tableCellIcon: CSSProperties = {
   verticalAlign: 'middle',
   width: 24
 }
+export const tableCellHead: CSSProperties | {[key: string]: CSSProperties} = {
+  background: '#fff',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  }
+}
 export const TableCellHead = styled(TableCell)({
   background: '#fff',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
 })

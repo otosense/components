@@ -29,12 +29,12 @@ declare module '@mui/material/Box' {
 }
 declare module "@mui/material/styles/createTypography" {
   interface Typography {
-    link: React.CSSProperties;
+    link: CSSProperties | {[key: string]: CSSProperties};
   }
 
   // allow configuration using `createMuiTheme`
   interface TypographyOptions {
-    link?: React.CSSProperties;
+    link?: CSSProperties | {[key: string]: CSSProperties};
   }
 }
 

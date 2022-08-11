@@ -60,25 +60,39 @@ export const UlNoM = styled('ul')({
 });
 
 export const Box135 = styled(Box)({
-  textTransform: 'capitalize',
-  width: 135,
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
   minWidth: 135,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
 export const Box140 = styled(Box)({
-  textTransform: 'capitalize',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
   width: 140,
   minWidth: 140,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
 export const Box125 = styled(Box)({
-  textTransform: 'capitalize',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
   width: 125,
   minWidth: 125,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
 });
+export const Box100 = styled(Box)({
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
+  minWidth: 100,
+  fontFamily: '"IBMPlexSans-Regular", sans-serif'
+});
 export const TitleBox70 = styled(Box)({
-  textTransform: 'capitalize',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
   display: 'inline-block',
   width: 70,
   fontFamily: '"IBMPlexSans-Regular", sans-serif'
@@ -86,5 +100,7 @@ export const TitleBox70 = styled(Box)({
 export const Box150 = styled(Box)({
   width: 150,
   display: 'inline-block',
-  textTransform: 'capitalize'
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
 });
