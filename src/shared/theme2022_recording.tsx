@@ -178,6 +178,10 @@ const otosenseTheme2022_recording = createTheme({
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 32,
       lineHeight: 1,
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 42,
@@ -187,7 +191,10 @@ const otosenseTheme2022_recording = createTheme({
       fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
       fontSize: 24,
       lineHeight: 1,
-      textTransform: 'capitalize',
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 32,
@@ -197,7 +204,10 @@ const otosenseTheme2022_recording = createTheme({
       fontFamily: '"IBMPlexSans-Medium", sans-serif',
       fontSize: 20,
       lineHeight: 1.5,
-      textTransform: 'capitalize',
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 24,
@@ -255,7 +265,10 @@ const otosenseTheme2022_recording = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
       lineHeight: 1.5,
-      textTransform: 'capitalize',
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 20,
@@ -265,7 +278,10 @@ const otosenseTheme2022_recording = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 20,
       lineHeight: 1,
-      textTransform: 'capitalize',
+      textTransform: 'none',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       color: '#101820',
       '@media (min-width:1280px)': {
         fontSize: 24,
@@ -278,6 +294,9 @@ const otosenseTheme2022_recording = createTheme({
       
     },
     overline: {
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: '16px !important',
       // lineHeight: 1,
@@ -290,6 +309,9 @@ const otosenseTheme2022_recording = createTheme({
       letterSpacing: 1,
     },
     link: {
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       color: '#009fbd',
       textDecoration: 'underline',
@@ -443,7 +465,10 @@ const otosenseTheme2022_recording = createTheme({
       variants: [
         {
           props: { variant: 'overline' },
-          style: { textTransform: 'capitalize', marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
+          style: { textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
         },
         {
           props: { variant: 'caption' },
@@ -468,7 +493,10 @@ const otosenseTheme2022_recording = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           fontFamily: '"OpenSans-Regular", sans-serif',
         },
       },
@@ -476,7 +504,10 @@ const otosenseTheme2022_recording = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           fontFamily: '"OpenSans-Regular", sans-serif',
           fontSize: 18,
           color: '#101820',
@@ -496,7 +527,10 @@ const otosenseTheme2022_recording = createTheme({
         root: {
           'paddingLeft': '1rem',
           'paddingRight': '1rem',
-          'textTransform': 'capitalize',
+          'textTransform': 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           'backgroundColor': '#f3f3f3',
           'fontSize': '20px',
           '&:hover': {
@@ -536,7 +570,10 @@ const otosenseTheme2022_recording = createTheme({
           '@media (max-width:1280px)': {
             // fontSize: 16,
           },
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
         },
         root: {
           borderBottom: '1px solid rgba(224, 224, 224, 1)',
@@ -573,7 +610,10 @@ const otosenseTheme2022_recording = createTheme({
           padding: 24,
           fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
           fontSize: 24,
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           color: '#101820',
         }
       }

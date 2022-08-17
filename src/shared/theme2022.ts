@@ -251,6 +251,7 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 18,
       lineHeight: 1.5,
+      textTransform: 'none',
       '::first-letter': {
         textTransform: 'uppercase',
       },
@@ -263,6 +264,7 @@ let otosenseTheme2022 = createTheme({
       fontFamily: '"IBMPlexSans-Regular", sans-serif',
       fontSize: 20,
       lineHeight: 1,
+      textTransform: 'none',
       '::first-letter': {
         textTransform: 'uppercase',
       },
@@ -366,7 +368,10 @@ let otosenseTheme2022 = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           width: 'auto',
         },
       },
@@ -451,9 +456,10 @@ let otosenseTheme2022 = createTheme({
       variants: [
         {
           props: { variant: 'overline' },
-          style: { '::first-letter': {
-            textTransform: 'uppercase',
-          }, marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
+          style: {
+            marginBottom: 7,
+            lineHeight: 'initial',
+            fontSize: 14 },
         },
         {
           props: { variant: 'caption' },
@@ -488,6 +494,7 @@ let otosenseTheme2022 = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
+          textTransform: 'none',
           '::first-letter': {
             textTransform: 'uppercase',
           },
@@ -510,7 +517,10 @@ let otosenseTheme2022 = createTheme({
         root: {
           'paddingLeft': '1rem',
           'paddingRight': '1rem',
-          'textTransform': 'capitalize',
+          'textTransform': 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           'backgroundColor': '#f3f3f3',
           '&:hover': {
             backgroundColor: '#fff',
@@ -549,6 +559,7 @@ let otosenseTheme2022 = createTheme({
           '@media (max-width:1280px)': {
             fontSize: 16,
           },
+          textTransform: 'none',
           '::first-letter': {
             textTransform: 'uppercase',
           },
@@ -582,7 +593,10 @@ let otosenseTheme2022 = createTheme({
           padding: 24,
           fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
           fontSize: 24,
-          textTransform: 'capitalize',
+          textTransform: 'none',
+          '::first-letter': {
+            textTransform: 'uppercase',
+          },
           color: '#101820',
         }
       }

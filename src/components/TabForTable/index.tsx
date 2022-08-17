@@ -11,7 +11,10 @@ interface StyledTabProps {
 }
 
 const TabForTable = styled((props: StyledTabProps) => <Tab {...props} />)({
-    textTransform: 'capitalize',
+    textTransform: 'none',
+    '::first-letter': {
+      textTransform: 'uppercase',
+    },
     minWidth: 100,
     [otosenseTheme2022.breakpoints.up('sm')]: {
       minWidth: 0,

@@ -39,6 +39,7 @@ export const tableCellHead: CSSProperties | {[key: string]: CSSProperties} = {
 }
 export const TableCellHead = styled(TableCell)({
   background: '#fff',
+  textTransform: 'none',
   '::first-letter': {
     textTransform: 'uppercase',
   },

@@ -41,6 +41,9 @@ export const MainBody = styled(Box) ({
 export const FormControlSelect = styled(Box)({
   height: 45,
   maxHeight: 45,
-  textTransform: 'capitalize'
+  textTransform: 'none',
+  '::first-letter': {
+    textTransform: 'uppercase',
+  },
 });
 

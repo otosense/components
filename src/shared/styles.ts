@@ -15,7 +15,10 @@ export const inputStyles = {
     color: colors.otosenseGray,
     display: 'block',
     marginBottom: 8,
-    textTransform: 'capitalize' as 'capitalize',
+    textTransform: 'none',
+    '::first-letter': {
+      textTransform: 'uppercase',
+    },
   },
   errorLabel: {
     color: colors.error,

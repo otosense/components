@@ -8,7 +8,7 @@ interface StyledTabProps {
 }
 
 const NavTab = styled((props: StyledTabProps) => <Tab {...props} />)({
-    textTransform: 'capitalize',
+    textTransform: 'none',
     minWidth: 100,
     [otosenseTheme2022.breakpoints.up('sm')]: {
       minWidth: 0,
@@ -30,12 +30,21 @@ const NavTab = styled((props: StyledTabProps) => <Tab {...props} />)({
     '&:hover': {
       color: otosenseTheme2022.palette.text.secondary,
       borderColor: otosenseTheme2022.palette.text.secondary,
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
     },
     '&.Mui-selected': {
       color: otosenseTheme2022.palette.text.primary,
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
     },
     '&.Mui-focusVisible': {
       backgroundColor: '#d1eaff',
+      '::first-letter': {
+        textTransform: 'uppercase',
+      },
     },
   });
 

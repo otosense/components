@@ -12,7 +12,10 @@ export const FloatingBtn = styled(Button)({
   bottom: '1rem',
   height: 45,
   fontSize: 18,
-  textTransform: 'capitalize',
+  textTransform: 'none',
+  '::first-letter': {
+    textTransform: 'uppercase'
+  },
   color: otosenseTheme2022.palette.secondary.contrastText,
   backgroundColor: '#fff',
   '&:hover': {

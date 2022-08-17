@@ -8,7 +8,10 @@ interface StyledTabProps {
 }
 
 const NavTabL = styled((props: StyledTabProps) => <Tab {...props} />)({
-    textTransform: 'capitalize',
+    textTransform: 'none',
+    '::first-letter': {
+      textTransform: 'uppercase',
+    },
     minWidth: 100,
     maxWidth: 'none',
     [otosenseTheme2022.breakpoints.up('sm')]: {
