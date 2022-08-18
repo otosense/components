@@ -14,18 +14,19 @@ import NavTabL from './components/NabTabL';
 import { OtoSwitch } from './components/Toggle';
 import { SuccessText, ErrorText } from './components/Typography';
 import TabForTable from './components/TabForTable';
-import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon, TableCellHead, tableCellHead } from './components/Tables';
+import { TableCellNoBorder, TableInGrid, TableCellComment, TableCellIcon, tableCellHead } from './components/Tables';
 import VirtualInputContainer from './components/VirtualInput';
 import LinearProgressWithLabel from './components/LinearProgressWithLabel';
-import InfoTextWithTooltip from './components/InfoTextWithTooltip'
-import { commentStyle, saveBtnStyle } from './components/CustomAutofill'
-import { NoMaxWidthTooltip } from './components/ToolTips'
+import InfoTextWithTooltip from './components/InfoTextWithTooltip';
+import { commentStyle, saveBtnStyle } from './components/CustomAutofill';
+import { NoMaxWidthTooltip } from './components/ToolTips';
+import { firstLetterUpper } from './components/Text';
 export {
+  firstLetterUpper,
   tableCellHead,
   NoMaxWidthTooltip,
   commentStyle,
   saveBtnStyle,
-  TableCellHead,
   InfoTextWithTooltip,
   LinearProgressWithLabel,
   VirtualInputContainer,

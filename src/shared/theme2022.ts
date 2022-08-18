@@ -295,6 +295,8 @@ let otosenseTheme2022 = createTheme({
       fontSize: 16,
       lineHeight: 1,
       letterSpacing: 1,
+      textTransform: 'none',
+      '::first-letter': { textTransform: 'uppercase' }
     },
     link: {
       '::first-letter': {
@@ -563,6 +565,7 @@ let otosenseTheme2022 = createTheme({
           '::first-letter': {
             textTransform: 'uppercase',
           },
+          whiteSpace: 'nowrap'
         },
         root: {
           fontSize: 18,

@@ -37,7 +37,7 @@ export const BlockBox = styled(Box)({
   display: 'block'
 })
 
-export const semiBoldText: CSSProperties = {
+export const semiBoldText: CSSProperties | {[selector: string]: CSSProperties} = {
   fontFamily: '"IBMPlexSans-SemiBold", sans-serif',
 }
 export const mediumText: CSSProperties = {

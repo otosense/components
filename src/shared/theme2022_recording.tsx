@@ -309,6 +309,7 @@ const otosenseTheme2022_recording = createTheme({
       letterSpacing: 1,
     },
     link: {
+      textTransform: 'none',
       '::first-letter': {
         textTransform: 'uppercase',
       },
@@ -465,10 +466,15 @@ const otosenseTheme2022_recording = createTheme({
       variants: [
         {
           props: { variant: 'overline' },
-          style: { textTransform: 'none',
+          style: {
+          textTransform: 'none',
           '::first-letter': {
             textTransform: 'uppercase',
-          },marginBottom: 7, lineHeight: 'initial', fontSize: 14 },
+          },
+          marginBottom: 7,
+          lineHeight: 'initial',
+          fontSize: 14
+        },
         },
         {
           props: { variant: 'caption' },
@@ -555,9 +561,9 @@ const otosenseTheme2022_recording = createTheme({
       styleOverrides: {
         root: {
           fontFamily: '"IBMPlexSans-Regular", sans-serif',
-          fontSize: 18,
+          fontSize: 20,
           '@media (max-width:1280px)': {
-            fontSize: 20,
+            fontSize: 18,
           },
         },
       }
@@ -566,17 +572,20 @@ const otosenseTheme2022_recording = createTheme({
       styleOverrides: {
         head: {
           color: '#757575',
-          // fontSize: 18,
-          '@media (max-width:1280px)': {
-            // fontSize: 16,
-          },
+          backgroundColor: '#fff',
           textTransform: 'none',
           '::first-letter': {
             textTransform: 'uppercase',
           },
+          whiteSpace: 'nowrap'
         },
         root: {
+          fontFamily: '"IBMPlexSans-Regular", sans-serif',
           borderBottom: '1px solid rgba(224, 224, 224, 1)',
+          fontSize: 20,
+          '@media (max-width:1280px)': {
+            fontSize: 18,
+          },
         }
       }
     },

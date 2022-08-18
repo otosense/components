@@ -11,4 +11,3 @@ export const ErrorText: CSSProperties = {
   fontFamily: 'IBMPlexSans-Bold',
   color: 'error.main'
 };
-

@@ -19,7 +19,6 @@ export const TableCellComment = styled(TableCell)({
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   padding: '6px 16px',
-  fontSize: 18,
 })
 
 export const TableCellIcon = styled(TableCell)({
@@ -37,10 +36,3 @@ export const tableCellHead: CSSProperties | {[key: string]: CSSProperties} = {
     textTransform: 'uppercase',
   }
 }
-export const TableCellHead = styled(TableCell)({
-  background: '#fff',
-  textTransform: 'none',
-  '::first-letter': {
-    textTransform: 'uppercase',
-  },
-})
