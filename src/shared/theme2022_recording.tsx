@@ -132,7 +132,7 @@ const otosenseTheme2022_recording = createTheme({
       dark: '#000',
     },
     error: {
-      main: '#CC4734',
+      main: '#bd1e00',
       contrastText: '#fff',
       dark: '#CC4734',
     },
@@ -145,7 +145,7 @@ const otosenseTheme2022_recording = createTheme({
       contrastText: '#101820',
     },
     success: {
-      main: '#1db381',
+      main: '#00aa55',
       contrastText: '#101820'
     },
     whiteBg: {

@@ -299,6 +299,7 @@ let otosenseTheme2022 = createTheme({
       '::first-letter': { textTransform: 'uppercase' }
     },
     link: {
+      textTransform: 'none',
       '::first-letter': {
         textTransform: 'uppercase',
       },
@@ -455,6 +456,11 @@ let otosenseTheme2022 = createTheme({
       ],
     },
     MuiTypography: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none'
+        }
+      },
       variants: [
         {
           props: { variant: 'overline' },
